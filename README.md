@@ -23,3 +23,6 @@ Emiliano Pedica, *@emi4458*
 
 ## Features
 *TBA*
+
+## Idee
+-Sezione nella home che suggerisce una pagina casuale sulle ricerche in corso.
