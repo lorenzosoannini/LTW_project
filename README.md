@@ -7,7 +7,7 @@
 A website where people can look for old and new research projects of "La Sapienza: University of Rome".
 
 ## Authors
-Lorenzo Soannini, *@lorenzosoannini*
+Lorenzo Soannini, *@lorenzosoannini*\
 Emiliano Pedica, *@emi4458*
 
 ## Index
