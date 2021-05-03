@@ -6,32 +6,16 @@
         <title>HOME | CUR - Centro Unico di Ricerca Sapienza</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
         <link rel="stylesheet" href="css/mytopnav_style.css">
-        <link rel="stylesheet" href="css/mystyle.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script type="text/javascript" src="js/topnav.js"></script>
+        <link rel="stylesheet" href="css/mystyle.css">
+        <script type="text/javascript" src="js/vue.min.js"></script>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <a href="https://www.uniroma1.it/it/">
-                    <img class="float-start" style="margin-top: 20px; margin-bottom: 10px;" src="assets/img/logo_full.png" alt="Uniroma 1">
-                </a>
-                <h1 class="float-end" style="margin-top: 20px;">
-                    <a class="title" href="/front_end/index.html" title="Home page">CUR - Centro Unico di Ricerca Sapienza</a>
-                </h1>
-            </div>
-
-            <div class="container topnav" id="myTopnav">
-                <a href="#" class="active">Home</a>
-                <a href="#">Novità</a>
-                <a href="#">Ricerca</a>
-                <a href="#">Contatti</a>
-                <a href="javascript:void(0);" class="icon" onclick="doHamburger()">
-                  <i class="fa fa-bars"></i>
-                </a>
-              </div>
-        </header>
-
+        <div id="header">
+            <topheader></topheader>
+        </div>
+        <script type="text/javascript" src="js/topheader.js"></script>
 
         <nav class="container">
             <a href="https://www.uniroma1.it/it/pagina-strutturale/contatti">Contatti</a> |
