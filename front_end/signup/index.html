@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width initial-scale=1.0"/>
+        <title> REGISTRATI | CUR - Centro Unico di Ricerca Sapienza</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <SCRIPT TYPE="text/javascript" SRC="checkSignUpForm.js"></SCRIPT>
+    </head>
+    <body class="text-center">
+        <div align="center">
+            <form method="POST" name="signUpForm" onSubmit="return checkSignUpForm()">
+                <img class="float-start" style="margin-top: 20px; margin-bottom: 10px; width: 400px; height: 500px;" src="../assets/img/hq_logo.png">
+                <p style="font-size:xx-large;">REGISTRAZIONE</p>
+                <input type="text" name="inputMatricola" class="checkForm" placeholder="Matricola" required>
+                <input type="email" name="inputEmail" class="checkForm" placeholder="Indirizzo email..." required>
+                <input type="password" name="signUpPassword" class="checkForm" placeholder="Password" required>
+                <input type="password" name="signUpConfirmPassword" class="checkForm" placeholder="Conferma la password" required>
+                <p><input type="text" name="inputCorso" class="checkForm" placeholder="Corso di studi (facoltativo)"></p>
+                <button name="signUpButton" type="submit" onsubmit="return checkSignUpForm()">Registrati</button>
+            </form>
+        </div>
+    </body>
+</html>
