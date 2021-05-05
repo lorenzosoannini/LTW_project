@@ -11,7 +11,7 @@ Vue.component('topheader', {
             </div>
 
             <div class="container topnav" id="myTopnav">
-                <a href="#" class="active">Home</a>
+                <a href="/front_end/">Home</a>
                 <a href="#">Novità</a>
                 <a href="#">Ricerca</a>
                 <a href="#">Contatti</a>
