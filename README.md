@@ -1,7 +1,7 @@
 # LTW Project
 
 ## Title
-### Centro Unico di Ricerca
+### CURS: Centro Unico di Ricerca Sapienza
 
 ## Description
 A website where people can look for old and new research projects of "La Sapienza: University of Rome".

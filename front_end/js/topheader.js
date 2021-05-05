@@ -6,7 +6,7 @@ Vue.component('topheader', {
                     <img class="float-start" style="margin-top: 20px; margin-bottom: 10px;" src="/front_end/assets/img/logo_full.png" alt="Uniroma 1">
                 </a>
                 <h1 class="float-end" style="margin-top: 20px;">
-                    <a class="title" href="/front_end/index.html" title="Home page">CUR - Centro Unico di Ricerca Sapienza</a>
+                    <a class="title" href="/front_end/index.html" title="Home page">CURS - Centro Unico di Ricerca Sapienza</a>
                 </h1>
             </div>
 
