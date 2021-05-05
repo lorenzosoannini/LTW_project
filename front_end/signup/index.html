@@ -4,21 +4,37 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width initial-scale=1.0"/>
         <title> REGISTRATI | CUR - Centro Unico di Ricerca Sapienza</title>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.reboot.css"/>
         <SCRIPT TYPE="text/javascript" SRC="checkSignUpForm.js"></SCRIPT>
+        <link rel="stylesheet" href="../css/mytopnav_style.css">
+        <link rel="stylesheet" href="../css/mystyle.css">
+        <script type="text/javascript" src="../js/vue.min.js"></script>
+
     </head>
     <body class="text-center">
-        <div align="center">
-            <form method="POST" name="signUpForm" onSubmit="return checkSignUpForm()">
-                <img class="float-start" style="margin-top: 20px; margin-bottom: 10px; width: 400px; height: 500px;" src="../assets/img/hq_logo.png">
-                <p style="font-size:xx-large;">REGISTRAZIONE</p>
-                <input type="text" name="inputMatricola" class="checkForm" placeholder="Matricola" required>
-                <input type="email" name="inputEmail" class="checkForm" placeholder="Indirizzo email..." required>
-                <input type="password" name="signUpPassword" class="checkForm" placeholder="Password" required>
-                <input type="password" name="signUpConfirmPassword" class="checkForm" placeholder="Conferma la password" required>
-                <p><input type="text" name="inputCorso" class="checkForm" placeholder="Corso di studi (facoltativo)"></p>
-                <button name="signUpButton" type="submit" onsubmit="return checkSignUpForm()">Registrati</button>
-            </form>
+
+        <div id="header">
+            <topheader></topheader>
         </div>
+        
+        <script type="text/javascript" src="../js/topheader.js"></script>
+        <a class="title">REGISTRAZIONE</a>
+    
     </body>
+    
+        <form id=formIscrizione method="POST" name="signUpForm" onSubmit="return checkSignUpForm()">
+            <div class="column"></div>
+            <div class="column">
+                <input type="text"      name="inputMatricola"         placeholder="Matricola" required><br>
+                <input type="email"     name="inputEmail"             placeholder="Indirizzo email..." required><br>
+                <input type="password"  name="signUpPassword"         placeholder="Password" required>
+                <input type="password"  name="signUpConfirmPassword"  placeholder="Conferma la password" required>
+                <input type="text"      name="inputCorso"             placeholder="Corso di studi (facoltativo)">     
+                <br>           
+                <button class="button" type="submit" onSubmit="return checkSignUpForm()" name="signUpButton" > <span> Registrati </span> </button>
+            </div>
+        </form>
+    
+   
 </html>

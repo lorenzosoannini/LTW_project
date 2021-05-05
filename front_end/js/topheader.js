@@ -7,8 +7,6 @@ Vue.component('topheader', {
                 </a>
                 <h1 class="float-end" style="margin-top: 20px;">
                     <a class="title" href="/front_end/index.html" title="Home page">CUR - Centro Unico di Ricerca Sapienza</a>
-                    <button class="accountButton" onclick="window.location.href='/front_end/login/index.html'" type="button" class="btn btn-secondary" > Entra      </button>
-                    <button class="accountButton" onclick="window.location.href='/front_end/signup/index.html'" type="button" class="btn btn-secondary"> Registrati </button>
                 </h1>
             </div>
 
