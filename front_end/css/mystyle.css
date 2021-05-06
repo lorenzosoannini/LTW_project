@@ -73,3 +73,15 @@ a.title {
     width: 100%;
   }
 }
+
+div.bottombar {
+  background-color: #822433;
+  height: fit-content;
+}
+
+div.bottombar p {
+  color: #FFFFFF;
+  vertical-align: middle;
+  line-height: 37px;
+  font-size: x-small;
+}
