@@ -21,20 +21,22 @@
         <script type="text/javascript" src="../js/topheader.js"></script>
         <a class="title">REGISTRAZIONE</a>
     
-    </body>
     
-        <form id=formIscrizione method="POST" name="signUpForm" onSubmit="return checkSignUpForm()">
-            <div class="column"></div>
-            <div class="column">
+    <div class="column"></div>
+    <div class="column">
+        <form action="signUp.php" class="form-signin" method="POST" name="signUpForm" onSubmit="return checkSignUpForm()" >
+                <input type="nome"      name="inputName"              placeholder="Nome" required><br>
+                <input type="cognome"   name="inputSurname"           placeholder="Cognome" required><br>
                 <input type="text"      name="inputMatricola"         placeholder="Matricola" required><br>
                 <input type="email"     name="inputEmail"             placeholder="Indirizzo email..." required><br>
-                <input type="password"  name="signUpPassword"         placeholder="Password" required>
-                <input type="password"  name="signUpConfirmPassword"  placeholder="Conferma la password" required>
-                <input type="text"      name="inputCorso"             placeholder="Corso di studi (facoltativo)">     
-                <br>           
-                <button class="button" type="submit" onSubmit="return checkSignUpForm()" name="signUpButton" > <span> Registrati </span> </button>
-            </div>
+                <input type="password"  name="inputSignUpPassword"    placeholder="Password" required>
+                <input type="password"  name="signUpConfirmPassword"  placeholder="Conferma la password" required>     
+                <br>    
+                <button class="button" type="submit" name="signUpButton" > <span> Registrati </span> </button>
         </form>
+    
+    </div>
+    </body>
     
    
 </html>

@@ -26,4 +26,5 @@ Emiliano Pedica, *@emi4458*
 
 ## Idee
 -Sezione nella home che suggerisce una pagina casuale sulle ricerche in corso.\
--Uso di cookies per ricordare ultimo login utente
+-Uso di cookies per ricordare ultimo login utente\
+-Iscrizione ad una newsletter
