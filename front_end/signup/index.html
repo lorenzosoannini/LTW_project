@@ -19,23 +19,52 @@
         </div>
         
         <script type="text/javascript" src="../js/topheader.js"></script>
-        <a class="title">REGISTRAZIONE</a>
+        <div class="row">
+            
+        </div>
     
     
     <div class="column"></div>
     <div class="column">
-        <form action="signUp.php" class="form-signin" method="POST" name="signUpForm" onSubmit="return checkSignUpForm()" >
-                <input type="nome"      name="inputName"              placeholder="Nome" required><br>
-                <input type="cognome"   name="inputSurname"           placeholder="Cognome" required><br>
-                <input type="text"      name="inputMatricola"         placeholder="Matricola" required><br>
-                <input type="email"     name="inputEmail"             placeholder="Indirizzo email..." required><br>
-                <input type="password"  name="inputSignUpPassword"    placeholder="Password" required>
-                <input type="password"  name="signUpConfirmPassword"  placeholder="Conferma la password" required>     
-                <br>    
+        
+
+        <form action="signUp.php" class="needs-validation" novalidate method="POST" name="signUpForm" onSubmit="return checkSignUpForm()">
+            <div class="form-row">
+              <div class="col-md-8 mb-3">
+                <a class="title">REGISTRAZIONE</a>
+                <label>Nome</label>
+                <input type="text" class="form-control" name="inputName" required>
+              </div>
+              <div class="col-md-8 mb-3">
+                <label>Cognome</label>
+                <input type="text" class="form-control" name="inputSurname" required>
+              </div>
+              <div class="col-md-8 mb-3">
+                <label>Email</label>
+                <input type="email" class="form-control" name="inputEmail" required>
+                <label for="validationTooltip01">Matricola</label>
+                  <input type="text" class="form-control" name="inputMatricola" required>
+                </div>
+              <div class="col-md-8 mb-3">
+                <label>Password</label>
+                <input type="password" class="form-control" name="inputSignUpPassword" required>
+              </div>
+              <div class="col-md-8 mb-3">
+                <label>Conferma la password</label>
+                <input type="password" class="form-control" name="signUpConfirmPassword" required>
+                <br>
                 <button class="button" type="submit" name="signUpButton" > <span> Registrati </span> </button>
-        </form>
+              </div>
+              
+              </div>
+            </div>
+            
+          </form>
+
+
     
     </div>
+    
     </body>
     
    

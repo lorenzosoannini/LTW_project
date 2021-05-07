@@ -3,17 +3,59 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width initial-scale=1.0"/>
+        <title> REGISTRATI | CUR - Centro Unico di Ricerca Sapienza</title>
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.reboot.css"/>
+        <SCRIPT TYPE="text/javascript" SRC="checkSignUpForm.js"></SCRIPT>
         <link rel="stylesheet" href="../css/mytopnav_style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script type="text/javascript" src="../js/topnav.js"></script>
         <link rel="stylesheet" href="../css/mystyle.css">
         <script type="text/javascript" src="../js/vue.min.js"></script>
+
     </head>
-    <body>
+    <body class="text-center">
+
         <div id="header">
             <topheader></topheader>
         </div>
+        
         <script type="text/javascript" src="../js/topheader.js"></script>
+        <div class="row">
+            
+        </div>
+    
+    
+    <div class="column"></div>
+    <div class="column">
+        
+
+        <form action="logIn.php" class="needs-validation" novalidate method="POST" name="signUpForm" onSubmit="return checkSignUpForm()">
+          
+          <div class="form-row">
+              <div class="col-mid-10 mb-3">
+                <h1>Bentornato, accedi: </h1>
+              </div>
+              <div class="col-md-10 mb-3">
+                  
+                <label>Email</label>
+                <input type="email" class="form-control" name="inputEmail" required>
+                </div>
+              <div class="col-md-10 mb-3">
+                <label>Password</label>
+                <input type="password" class="form-control" name="inputLogInPassword" required>
+                <br>
+                <button class="button" type="submit" name="logInButton" > <span> Accedi </span> </button>
+              </div>
+              
+              </div>
+            </div>
+            
+          </form>
+
+
+    
+    </div>
+    
     </body>
+    
+   
 </html>
