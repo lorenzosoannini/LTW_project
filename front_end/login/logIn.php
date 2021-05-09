@@ -5,12 +5,13 @@
                 if(!(isset($_POST['logInButton']))){ header("Location: ../index.html"); }   /*controllo se è stato premuto signupbutton (header reindirizza)*/
                 else{
                     $email= $_POST['inputEmail'];
-                    $password=$_POST['inputLogInPassword'];
+                    $password=md5($_POST['inputLogInPassword']);
                     $q1="select * from utente where email= $1 and password= $2";
                     $result=pg_query_params($dbconn,$q1,array($email,$password));
                     if($line=pg_fetch_array($result,null,PGSQL_ASSOC)){
                         echo "<h1>Bentornato<h1>
                         <a href=../index.html> Clicca qui per la home </a>";
+                        setcookie("username",$email,time()+999999);
                         }
                     
                     else{

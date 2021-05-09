@@ -15,7 +15,7 @@
                         $name=$_POST['inputName'];
                         $surname=$_POST['inputSurname'];
                         $matricola=$_POST['inputMatricola'];
-                        $password=$_POST['inputSignUpPassword'];
+                        $password=md5($_POST['inputSignUpPassword']);
                         $q2="insert into utente values ($1,$2,$3,$4,$5)";
                         $data=pg_query_params($dbconn,$q2, array($name,$surname,$matricola,$email,$password));
                         if($data){                                                                              /*in $data è stato inserito un valore di ritorno booleano*/
