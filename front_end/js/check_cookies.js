@@ -30,3 +30,4 @@ function checkCookie(cname){
     else{
         return true; 
     }
+}
