@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+    
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width initial-scale=1.0"/>
-        <title> REGISTRATI | CUR - Centro Unico di Ricerca Sapienza</title>
+        <title> ACCEDI | CUR - Centro Unico di Ricerca Sapienza</title>
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.reboot.css"/>
         <SCRIPT TYPE="text/javascript" SRC="checkSignUpForm.js"></SCRIPT>
@@ -23,19 +24,16 @@
             
         </div>
     
-    
+    <h1 id="login_effettuato"></h1>
     <div class="column"></div>
-    <div class="column">
+    <div class="column" id="form_">
         
-
-        <form action="logIn.php" class="needs-validation" novalidate method="POST" name="signUpForm" onSubmit="return checkSignUpForm()">
-          
+        <form action="logIn.php" id="form_login" class="needs-validation" novalidate method="POST" name="signUpForm" onSubmit="return checkSignUpForm()" style="visibility: visible;">
           <div class="form-row">
               <div class="col-mid-10 mb-3">
-                <h1>Bentornato, accedi: </h1>
+                <h1 id="prova_">Bentornato, accedi: </h1>
               </div>
-              <div class="col-md-10 mb-3">
-                  
+              <div class="col-md-10 mb-3"> 
                 <label>Email</label>
                 <input type="email" class="form-control" name="inputEmail" required>
                 </div>
@@ -45,16 +43,12 @@
                 <br>
                 <button class="button" type="submit" name="logInButton" > <span> Accedi </span> </button>
               </div>
-              
               </div>
             </div>
             
           </form>
-
-
-    
     </div>
-    
+    <script type="text/javascript" src="../js/check_cookies.js"> </script>
     </body>
     
    
