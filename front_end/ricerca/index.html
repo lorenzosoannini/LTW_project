@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width initial-scale=1.0"/>
+        <title>Home | CURS - Centro Unico di Ricerca Sapienza</title>
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../css/mytopnav_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="../js/topnav.js"></script>
+        <link rel="stylesheet" href="../css/mystyle.css">
+        <script type="text/javascript" src="../js/vue.min.js"></script>
+    </head>
+    <body onload="setActiveTab()">
+        <div id="header" name="Ricerca">
+            <topheader></topheader>
+        </div>
+        <script type="text/javascript" src="../js/topheader.js"></script>
+
+        <br>
+        <br>
+
+        <div id="mainbox" class="container">
+            <p style="font-size: large;">Effettua la tua ricerca:</p>
+            <div class="row">
+                <div class="col mb-3">
+                    <label for="titolo" class="form-label">Titolo</label>
+                    <input type="text" class="form-control" id="titolo" placeholder="Inserisci qui il titolo">
+                </div>
+                <div class="col mb-3">
+                    <label for="autore" class="form-label">Autore</label>
+                    <input type="text" class="form-control" id="autore" placeholder="Inserisci qui l'autore">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-3">
+                    <label for="anno" class="form-label">Anno</label>
+                    <input type="text" class="form-control" id="anno" placeholder="Inserisci qui l'anno">
+                </div>
+                <div class="col mb-3" style="display: inline-block; margin-top: 40px;">
+                    <input class="form-check-input" type="checkbox" value="" id="incorso">
+                    <label class="form-check-label" for="incorso">In corso</label>
+                </div>
+                <div class="col mb-3">
+                    <label for="lingua" class="form-label">Lingua</label>
+                    <select class="form-select form-control" id="lingua">
+                        <option selected></option>
+                        <option value="it">Italiano</option>
+                        <option value="en">Inglese</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-3">
+                    <label for="dipartimento" class="form-label">Dipartimento</label>
+                    <select class="form-select form-control" id="dipartimento">
+                        <option selected></option>
+                        <option value="diap">Architettura e progetto</option>
+                        <option value="dba">Biologia ambientale</option>
+                        <option value="bbcd">Biologia e biotecnologie Charles Darwin</option>
+                        <option value="chem">Chimica</option>
+                        <option value="ctf">Chimica e tecnologie del farmaco</option>
+                        <option value="chvaldoni">Chirurgia Pietro Valdoni</option>
+                        <option value="dcgs">Chirurgia generale e specialistica Paride Stefanini</option>
+                        <option value="coris">Comunicazione e ricerca sociale</option>
+                        <option value="deap">Diritto ed economia delle attività produttive</option>
+                        <option value="ecodir">Economia e diritto</option>
+                        <option value="filosofia">Filosofia</option>
+                        <option value="fisica">Fisica</option>
+                        <option value="dff">Fisiologia e farmacologia Vittorio Erspamer</option>
+                        <option value="di">Informatica</option>
+                        <option value="diaee">Ingegneria astronautica, elettrica ed energetica</option>
+                        <option value="dicma">Ingegneria chimica materiali ambiente</option>
+                        <option value="dicea">Ingegneria civile, edile e ambientale</option>
+                        <option value="diet">Ingegneria dell'informazione, elettronica e telecomunicazioni</option>
+                        <option value="diag">Ingegneria informatica, automatica e gestionale Antonio Ruberti</option>
+                        <option value="dima">Ingegneria meccanica e aerospaziale</option>
+                        <option value="disg">Ingegneria strutturale e geotecnica</option>
+                        <option value="diso">Istituto italiano di studi orientali - Iso</option>
+                        <option value="lcm">Lettere e culture moderne</option>
+                        <option value="management">Management</option>
+                        <option value="mat">Matematica Guido Castelnuovo</option>
+                        <option value="misu">Materno infantile e scienze urologiche</option>
+                        <option value="dmcm">Medicina clinica e molecolare</option>
+                        <option value="dmm">Medicina molecolare</option>
+                        <option value="dms">Medicina sperimentale</option>
+                        <option value="dmtp">Medicina traslazionale e di precisione</option>
+                        <option value="memotef">Metodi e modelli per l'economia, il territorio e la finanza</option>
+                        <option value="neuroscienze">Neuroscienze umane</option>
+                        <option value="nesmos">Neuroscienze, salute mentale e organi di senso - Nesmos</option>
+                        <option value="organidisenso">Organi di senso</option>
+                        <option value="pdta">Pianificazione, design, tecnologia dell'architettura</option>
+                        <option value="dippsi">Psicologia</option>
+                        <option value="dip38">Psicologia dei processi di sviluppo e socializzazione</option>
+                        <option value="dip42">Psicologia dinamica, clinica e salute</option>
+                        <option value="dspmi">Sanità pubblica e malattie infettive</option>
+                        <option value="saimlal">Scienze anatomiche, istologiche, medico-legali e dell'apparato locomotore</option>
+                        <option value="dsb">Scienze biochimiche Alessandro Rossi Fanelli</option>
+                        <option value="dscienzechir">Scienze chirurgiche</option>
+                        <option value="sciac">Scienze cliniche internistiche, anestesiologiche e cardiovascolari</option>
+                        <option value="antichita">Scienze dell'antichità</option>
+                        <option value="dst">Scienze della Terra</option>
+                        <option value="sbai">Scienze di base e applicate per l'ingegneria</option>
+                        <option value="dsbmc">Scienze e biotecnologie medico-chirurgiche (Latina)</option>
+                        <option value="scienzegiuridiche">Scienze giuridiche</option>
+                        <option value="smcmt">Scienze medico-chirurgiche e medicina traslazionale</option>
+                        <option value="odontoiatriamaxfacc">Scienze odontostomatologiche e maxillo facciali</option>
+                        <option value="disp">Scienze politiche</option>
+                        <option value="droap">Scienze radiologiche, oncologiche e anatomo-patologiche</option>
+                        <option value="disse">Scienze sociali ed economiche</option>
+                        <option value="dss">Scienze statistiche</option>
+                        <option value="dsdra">Storia, disegno e restauro dell'architettura</option>
+                        <option value="saras">Storia, antropologia, religioni, arte, spettacolo</option>
+                        <option value="seai">Studi europei, americani e interculturali</option>
+                        <option value="dsge">Studi giuridici ed economici</option>
+                    </select>
+                </div>
+                <div class="col mb-3">
+                    <label for="parolachiave" class="form-label">Parola chiave</label>
+                    <input type="text" class="form-control" id="parolachiave" placeholder="Inserisci qui la parola chiave">
+                </div>
+            </div>
+        </div>
+
+        <nav class="container">
+            <a href="https://www.uniroma1.it/it/pagina-strutturale/contatti">Contatti</a> |
+            <a href="https://www.uniroma1.it/it/pagina/settore-urp-rapporti-con-il-pubblico">URP</a> |
+            <a href="https://www.uniroma1.it/it/pagina/settore-ufficio-stampa-e-comunicazione">Media</a> |
+        </nav>
+        <div class="bottombar">
+            <div class="container">
+                <p>
+                    © Sapienza Università di Roma - Piazzale Aldo Moro 5, 00185 Roma - (+39) 06 49911 - CF 80209930587 PI 02133771002
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
