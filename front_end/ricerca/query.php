@@ -23,16 +23,10 @@
             $dbconn=pg_connect("host=localhost port=5432 dbname=centro_ricerca_unico user=postgres password=password") or die("errore di connessione".pg_last_error());
             if(!(isset($_POST['ricercaButton']))){ header("Location: index.html"); }
             else{
-                
+                $columns = array("titolo"=>$_POST['titolo'], "autore"=>$_POST['autore'], "annopub"=>$_POST['anno'], "descrizione"=>$_POST['parolachiave'], "dipartimento"=>$_POST['dipartimento'], "lingua"=>$_POST['lingua']);
                 if(isset($_POST['incorso']))
-                    $anno = -1;
-                else{
-                    $anno = $_POST['anno'];
-                    if($anno !== null)
-                        $anno = intval($anno);
-                }
+                    $columns['annopub'] = -1;
 
-                $columns = array("titolo"=>$_POST['titolo'], "autore"=>$_POST['autore'], "annopub"=>$anno, "descrizione"=>$_POST['parolachiave'], "dipartimento"=>$_POST['dipartimento'], "lingua"=>$_POST['lingua']);
                 $clauses = array();
                 $non_null_params = array();
                 $param_index=1;
@@ -51,6 +45,13 @@
                     }
                 }
                 $where_clause = "WHERE " . implode(" AND ", $clauses);
+
+                echo $where_clause;
+                echo "<br>";
+                foreach($non_null_params as $name=>$value){
+                    echo $name . "= " . $value;
+                }
+
                 $data = pg_query_params("SELECT titolo, autore, annopub, dipartimento, lingua from pubblicazioni $where_clause", $non_null_params);
 
                 if($data){

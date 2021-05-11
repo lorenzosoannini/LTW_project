@@ -1,6 +1,9 @@
 function disableAnno(){
     if(document.getElementById("incorso").checked == true){
-        document.getElementById("anno").disabled = true;
+        var anno = document.getElementById("anno");
+        anno.disabled = true;
+        anno.value = '';
+        
     }
     else{
         document.getElementById("anno").disabled = false;
