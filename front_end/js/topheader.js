@@ -14,7 +14,8 @@ Vue.component('topheader', {
                 <a href="/front_end/">Home</a>
                 <a href="#">Novità</a>
                 <a href="/front_end/ricerca/">Ricerca</a>
-                <a href="#">Contatti</a>
+                <a href="/front_end/login/">LogIn</a>
+                <a href="/front_end/signup/">Registrati</a>
                 <a href="javascript:void(0);" class="icon" onclick="doHamburger()">
                 <i class="fa fa-bars"></i>
                 </a>                
