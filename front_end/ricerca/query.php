@@ -23,42 +23,38 @@
             $dbconn=pg_connect("host=localhost port=5432 dbname=centro_ricerca_unico user=postgres password=password") or die("errore di connessione".pg_last_error());
             if(!(isset($_POST['ricercaButton']))){ header("Location: index.html"); }
             else{
-                if(isset($_POST['titolo']))
-                    $titolo = $_POST['titolo'];
-                else
-                    $titolo = '';
-                if(isset($_POST['autore']))
-                    $autore = $_POST['autore'];
-                else
-                    $autore = '';
-                if(isset($_POST['anno']))
-                    $anno = intval($_POST['anno']);
-                else
-                    $anno = 'is not null';
-                if(isset($_POST['lingua']))
-                    $lingua = $_POST['lingua'];
-                else
-                    $lingua = 'is not null';
-                if(isset($_POST['dipartimento']))
-                    $dipartimento = $_POST['dipartimento'];
-                else
-                    $dipartimento = 'is not null';
-                if(isset($_POST['parolachiave']))
-                    $parolachiave = $_POST['parolachiave'];
-                else
-                    $parolachiave = '';
-
-                $q = "select titolo, autore, annopub, dipartimento, lingua from pubblicazioni where titolo like $1 and autore like $2 and annopub = $3 and lingua = $4 and dipartimento = $5 and descrizione like $6";
-                if($anno == 'is not null')
-                    str_replace('annopub =', 'annopub ', $q);
-                if($lingua == 'is not null')
-                    str_replace('lingua =', 'lingua ', $q);
-                if($dipartimento == 'is not null')
-                    str_replace('dipartimento =', 'dipartimento ', $q);
                 
-                $params = array("%$titolo%", "%$autore%", $anno, $lingua, $dipartimento, "%$parolachiave%");
-                $data = pg_query_params($dbconn, $q, $params);
+                if(isset($_POST['incorso']))
+                    $anno = -1;
+                else{
+                    $anno = $_POST['anno'];
+                    if($anno !== null)
+                        $anno = intval($anno);
+                }
+
+                $columns = array("titolo"=>$_POST['titolo'], "autore"=>$_POST['autore'], "annopub"=>$anno, "descrizione"=>$_POST['parolachiave'], "dipartimento"=>$_POST['dipartimento'], "lingua"=>$_POST['lingua']);
+                $clauses = array();
+                $non_null_params = array();
+                $param_index=1;
+                foreach ($columns as $name=>$value) {
+                    if ($value !== null && $value !== '') {
+                        if($name === 'annopub' || $name === 'lingua' || $name === 'dipartimento'){
+                            $clauses[] = "$name=\${$param_index}";
+                            $param_index++;
+                            $non_null_params[] = $value;
+                        }
+                        else{
+                            $clauses[] = "$name LIKE \${$param_index}";
+                            $param_index++;
+                            $non_null_params[] = "%$value%";
+                        }
+                    }
+                }
+                $where_clause = "WHERE " . implode(" AND ", $clauses);
+                $data = pg_query_params("SELECT titolo, autore, annopub, dipartimento, lingua from pubblicazioni $where_clause", $non_null_params);
+
                 if($data){
+                    echo "<h3>SONO DENTRO L'IF(DATA)</h3>";
                     echo "<div class='container'>
                             <table class='table'>
                             <thead>
@@ -79,9 +75,9 @@
                                 <th scope='row'>$count</th>
                                 <td>" . $line['titolo'] . "</td>
                                 <td>" . $line['autore'] . "</td>
-                                <td>" . $colvalue['annopub'] . "</td>
-                                <td>" . $colvalue['dipartimento'] . "</td>
-                                <td>" . $colvalue['lingua'] . "</td>";
+                                <td>" . $line['annopub'] . "</td>
+                                <td>" . $line['dipartimento'] . "</td>
+                                <td>" . $line['lingua'] . "</td>";
                     }
                     
                     echo "  </tbody>
