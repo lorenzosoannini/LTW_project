@@ -16,13 +16,25 @@ Emiliano Pedica, *@emi4458*
 1. [Features](#Features)
 
 ## Technologies used
-*TBA*
+-HTML\
+-Bootstrap\
+-CSS\
+-JavaScript\
+-Vue.js\
+-JQuery\
+-JQuery UI\
+-AJAX\
+-PHP
 
 ## ER diagrams
 *TBA*
 
 ## Features
-*TBA*
+-Search page to query Sapienza research projects\
+-Sign Up and login system to add new projecs or publications\
+-News page to see the newest publications\
+-Responsive navbar with hamburger menu on smaller screens\
+-Custom error 404 page 
 
 ## Idee
 -Sezione nella home che suggerisce una pagina casuale sulle ricerche in corso.\
