@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width initial-scale=1.0"/>
         <title>Home | CURS - Centro Unico di Ricerca Sapienza</title>
@@ -46,6 +49,49 @@
               </div>
         </div>
 
+
+        <div id="casual_page" class="container bg-secondary mt-2">
+          <div class="row">
+            <h1>Lettura consigliata </h1>
+          </div>
+          <div class="row m-auto">
+            <h2 id="titolo"></h2>
+          </div>
+          <div class="row m-auto">
+            <h3 id="autore"></h3>
+          </div>
+          <div class="row m-auto">
+            <h4 id="descrizione"></h4>
+          </div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+          function reqListener () {
+            console.log(this.responseText);
+          }
+          var oReq = new XMLHttpRequest();
+          oReq.onload = function() {
+            var testo=this.responseText;
+            var testo2=testo.replace(/\"/g,'§');
+            var testo3=testo2.split("§"); //array
+            document.getElementById("titolo").innerHTML=testo3[1];
+            document.getElementById("autore").innerHTML=testo3[3];
+            document.getElementById("descrizione").innerHTML=testo3[7];
+            //document.getElementById("titolo_").innerHTML=testo3[1];
+          };
+          oReq.open("get", "js/random_page.php", true);                       
+          oReq.send();
+
+        </script>
+
+        <!-- <script type="text/javascript" src="js/random_page.js"> </script> -->
+          
+        
+        
         <br>
         <br>
         <nav class="container">
