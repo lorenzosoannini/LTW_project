@@ -4,7 +4,7 @@
       
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width initial-scale=1.0"/>
-        <title> REGISTRATI | CUR - Centro Unico di Ricerca Sapienza</title>
+        <title> REGISTRATI | CURS - Centro Unico di Ricerca Sapienza</title>
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.reboot.css"/>
         <SCRIPT TYPE="text/javascript" SRC="checkSignUpForm.js"></SCRIPT>
@@ -15,60 +15,74 @@
         <script type="text/javascript" src="../js/vue.min.js"></script>
 
     </head>
-    <body class="text-center" onload="setActiveTab()">
+    <body onload="setActiveTab()">
 
         <div id="header" name="Registrati">
             <topheader></topheader>
         </div>
         
         <script type="text/javascript" src="../js/topheader.js"></script>
-        <div class="row">
-            
-        </div>
-    
-    
-    <div class="column"></div>
-    <div class="column">
-        
-
-        <form action="signUp.php" class="needs-validation" novalidate method="POST" name="signUpForm" onSubmit="return checkSignUpForm()">
-            <div class="form-row">
-              <div class="col-md-8 mb-3">
-                <a class="title">REGISTRAZIONE</a>
-                <label>Nome</label>
-                <input type="text" class="form-control" name="inputName" required>
-              </div>
-              <div class="col-md-8 mb-3">
-                <label>Cognome</label>
-                <input type="text" class="form-control" name="inputSurname" required>
-              </div>
-              <div class="col-md-8 mb-3">
-                <label>Email</label>
-                <input type="email" class="form-control" name="inputEmail" required>
-                <label for="validationTooltip01">Matricola</label>
-                  <input type="text" class="form-control" name="inputMatricola" required>
+                
+        <div class="container text-center" style="width: 30%;">
+            <form action="signUp.php" class="needs-validation" novalidate method="POST" name="signUpForm" onSubmit="return checkSignUpForm()">
+                <div class="form-row">
+                    <div class="col-md-8 mb-3">
+                        <a class="title">REGISTRAZIONE</a>
+                        <label>Nome</label>
+                        <input type="text" class="form-control" name="inputName" required>
+                    </div>
                 </div>
-              <div class="col-md-8 mb-3">
-                <label>Password</label>
-                <input type="password" class="form-control" name="inputSignUpPassword" required>
-              </div>
-              <div class="col-md-8 mb-3">
-                <label>Conferma la password</label>
-                <input type="password" class="form-control" name="signUpConfirmPassword" required>
-                <br>
-                <button class="button" type="submit" name="signUpButton" > <span> Registrati </span> </button>
-              </div>
-              
-              </div>
+                <div class="form-row">
+                    <div class="col-md-8 mb-3">
+                        <label>Cognome</label>
+                        <input type="text" class="form-control" name="inputSurname" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-8 mb-3">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="inputEmail" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-8 mb-3">
+                        <label for="validationTooltip01">Matricola</label>
+                        <input type="text" class="form-control" name="inputMatricola" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-8 mb-3">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="inputSignUpPassword" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-8 mb-3">
+                        <label>Conferma la password</label>
+                        <input type="password" class="form-control" name="signUpConfirmPassword" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-8 mb-3">
+                        <button class="button" type="submit" name="signUpButton" > <span> Registrati </span> </button>
+                    </div>
+                </div>             
+            </form>
+        </div>
+
+        <br>
+        <br>
+        <nav class="container">
+            <a href="https://www.uniroma1.it/it/pagina-strutturale/contatti">Contatti</a> |
+            <a href="https://www.uniroma1.it/it/pagina/settore-urp-rapporti-con-il-pubblico">URP</a> |
+            <a href="https://www.uniroma1.it/it/pagina/settore-ufficio-stampa-e-comunicazione">Media</a> |
+        </nav>
+        <div class="bottombar">
+            <div class="container">
+                <p>
+                    © Sapienza Università di Roma - Piazzale Aldo Moro 5, 00185 Roma - (+39) 06 49911 - CF 80209930587 PI 02133771002
+                </p>
             </div>
-            
-          </form>
-
-
-    
-    </div>
-    
-    </body>
-    
-   
+        </div>    
+    </body>   
 </html>

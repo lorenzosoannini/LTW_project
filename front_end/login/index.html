@@ -4,10 +4,10 @@
     
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width initial-scale=1.0"/>
-        <title> ACCEDI | CUR - Centro Unico di Ricerca Sapienza</title>
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.reboot.css"/>
-        <SCRIPT TYPE="text/javascript" SRC="checkSignUpForm.js"></SCRIPT>
+        <title> ACCEDI | CURS - Centro Unico di Ricerca Sapienza</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../css/bootstrap.reboot.css"/>
+        <script type="text/javascript" src="checkSignUpForm.js"></script>
         <link rel="stylesheet" href="../css/mytopnav_style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script type="text/javascript" src="../js/topnav.js"></script>
@@ -15,43 +15,60 @@
         <script type="text/javascript" src="../js/vue.min.js"></script>
 
     </head>
-    <body class="text-center" onload="setActiveTab()">
+    <body onload="setActiveTab()">
 
         <div id="header" name="LogIn">
             <topheader></topheader>
         </div>
         
         <script type="text/javascript" src="../js/topheader.js"></script>
-        <div class="row">
+
+        <div class="container text-center" style="width: 30%;">
+            <h1 id="login_effettuato"></h1>
+
+            <div id="form_">
             
-        </div>
-    
-    <h1 id="login_effettuato"></h1>
-    <div class="column"></div>
-    <div class="column" id="form_">
-        
-        <form action="logIn.php" id="form_login" class="needs-validation" novalidate method="POST" name="signUpForm" onSubmit="return checkSignUpForm()" style="visibility: visible;">
-          <div class="form-row">
-              <div class="col-mid-10 mb-3">
-                <h1 id="prova_">Bentornato, accedi: </h1>
-              </div>
-              <div class="col-md-10 mb-3"> 
-                <label>Email</label>
-                <input type="email" class="form-control" name="inputEmail" required>
-                </div>
-              <div class="col-md-10 mb-3">
-                <label>Password</label>
-                <input type="password" class="form-control" name="inputLogInPassword" required>
-                <br>
-                <button class="button" type="submit" name="logInButton" > <span> Accedi </span> </button>
-              </div>
-              </div>
+                <form action="logIn.php" id="form_login" class="needs-validation" novalidate method="POST" name="signUpForm" onsubmit="return checkSignUpForm()" style="visibility: visible;">
+                    <div class="form-row">
+                        <div class="col mb-3">
+                            <h1 id="prova_">Bentornato, accedi:</h1>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col mb-3"> 
+                            <label>Email</label>
+                            <input type="email" class="form-control" name="inputEmail" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col mb-3">
+                            <label>Password</label>
+                            <input type="password" class="form-control" name="inputLogInPassword" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col mb-3">
+                            <button class="button" type="submit" name="logInButton" > <span> Accedi </span> </button>
+                        </div>
+                    </div>                  
+                </form>
             </div>
-            
-          </form>
-    </div>
-    <script type="text/javascript" src="../js/check_cookies.js"> </script>
-    </body>
-    
-   
+        </div>
+
+        <br>
+        <br>
+        <nav class="container">
+            <a href="https://www.uniroma1.it/it/pagina-strutturale/contatti">Contatti</a> |
+            <a href="https://www.uniroma1.it/it/pagina/settore-urp-rapporti-con-il-pubblico">URP</a> |
+            <a href="https://www.uniroma1.it/it/pagina/settore-ufficio-stampa-e-comunicazione">Media</a> |
+        </nav>
+        <div class="bottombar">
+            <div class="container">
+                <p>
+                    © Sapienza Università di Roma - Piazzale Aldo Moro 5, 00185 Roma - (+39) 06 49911 - CF 80209930587 PI 02133771002
+                </p>
+            </div>
+        </div>
+        <script type="text/javascript" src="../js/check_cookies.js"> </script>
+    </body>   
 </html>
