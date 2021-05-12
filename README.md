@@ -34,7 +34,8 @@ Emiliano Pedica, *@emi4458*
 -Sign Up and login system to add new projecs or publications\
 -News page to see the newest publications\
 -Responsive navbar with hamburger menu on smaller screens\
--Custom error 404 page 
+-Custom error 404 page\
+-Cookie to remember last login
 
 ## Idee
 -Sezione nella home che suggerisce una pagina casuale sulle ricerche in corso.\
