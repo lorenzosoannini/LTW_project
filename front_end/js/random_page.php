@@ -33,11 +33,11 @@
 
     
         
-        echo json_encode($title_);
-        echo json_encode($autore_);
-        echo json_encode($annopub_);
-        echo json_encode($descrizione_);
-        echo json_encode($dipartimento_);
+        echo json_encode($title_,JSON_UNESCAPED_UNICODE);
+        echo json_encode($autore_,JSON_UNESCAPED_UNICODE);
+        echo json_encode($annopub_,JSON_UNESCAPED_UNICODE);
+        echo json_encode($descrizione_,JSON_UNESCAPED_UNICODE);
+        echo json_encode($dipartimento_,JSON_UNESCAPED_UNICODE);
         
 
         ?>

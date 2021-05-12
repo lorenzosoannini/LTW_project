@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8"/>
+        <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width initial-scale=1.0"/>
         <title>Home | CURS - Centro Unico di Ricerca Sapienza</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -70,7 +70,7 @@
                     </div>
                 </div>
             </div>
-        </div>       
+        </div>        
         
 
         <script type="text/javascript">
@@ -92,6 +92,18 @@
                 oReq.open("get", "js/random_page.php", true);                       
                 oReq.send();
             }
+            var oReq = new XMLHttpRequest();
+            oReq.onload = function() {
+                var testo=this.responseText;
+                var testo2=testo.replace(/\"/g,'§');
+                var testo3=testo2.split("§"); //array
+                document.getElementById("titolo").innerHTML=testo3[1];
+                document.getElementById("autore").innerHTML=testo3[3];
+                document.getElementById("descrizione").innerHTML=testo3[7];
+            };
+            oReq.open("get", "js/random_page.php", true);                       
+            oReq.send();
+
         </script>
 
         <!-- <script type="text/javascript" src="js/random_page.js"> </script> -->
