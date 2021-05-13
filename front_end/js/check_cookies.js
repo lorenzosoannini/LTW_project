@@ -2,7 +2,8 @@
 var username = getCookie("username");
 if (username != "") {
     document.getElementById("form_login").style="visibility: hidden;";
-    document.getElementById("login_effettuato").innerHTML="Hai già effettuato l'accesso"
+    document.getElementById("line_").innerHTML="Puoi continuare a navigare nel sito";
+    document.getElementById("login_effettuato").innerHTML="Ciao "+getCookie("username")+", hai già effettuato l accesso";
       }
 
 

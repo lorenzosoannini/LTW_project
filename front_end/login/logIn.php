@@ -9,9 +9,11 @@
                     $q1="select * from utente where email= $1 and password= $2";
                     $result=pg_query_params($dbconn,$q1,array($email,$password));
                     if($line=pg_fetch_array($result,null,PGSQL_ASSOC)){
-                        echo "<h1>Bentornato<h1>
-                        <a href=../index.html> Clicca qui per la home </a>";
-                        setcookie("username",$email,time()+999999);
+                        $q2="select nome from utente where email=$1";
+                        $result2=pg_query_params($dbconn,$q2,array($email));
+                        $nome=pg_fetch_result($result2,0,0);
+                        setcookie("username",$nome,time()+999999);
+                        header("location: ../index.html");
                         }
                     
                     else{

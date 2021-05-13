@@ -8,18 +8,19 @@
                     $q1="select * from utente where email= $1";
                     $result=pg_query_params($dbconn,$q1,array($email));
                     if($line=pg_fetch_array($result,null,PGSQL_ASSOC)){
-                        echo "<h1> Sei già registrato al nostro sito<h1>
-                        <a href=../login/index.html> Clicca qui per accedere </a>";
+                        header("location: ../login/index.html");
                     }
                     else{
                         $name=$_POST['inputName'];
                         $surname=$_POST['inputSurname'];
                         $matricola=$_POST['inputMatricola'];
                         $password=md5($_POST['inputSignUpPassword']);
-                        $q2="insert into utente values ($1,$2,$3,$4,$5)";
-                        $data=pg_query_params($dbconn,$q2, array($name,$surname,$matricola,$email,$password));
-                        if($data){                                                                              /*in $data è stato inserito un valore di ritorno booleano*/
-                            echo "<h1>Registrazione completata, </h1> <a href=../index.html> clicca qui </a> <h1> per tornare al nostro sito</h1>";
+                        $permission=$_POST['permission'];
+                        $q2="insert into utente values ($1,$2,$3,$4,$5,$6)";
+                        $data=pg_query_params($dbconn,$q2, array($name,$surname,$matricola,$email,$password,$permission));
+                        if($data){                         /*in $data è stato inserito un valore di ritorno booleano*/
+                            setcookie("username",$name,time()+999999);
+                            header("location: ../index.html");
                         }
                         else{
                             echo "<h1>Qualcosa è andato storto </h1>";
