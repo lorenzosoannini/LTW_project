@@ -23,53 +23,71 @@
         
         <script type="text/javascript" src="../js/topheader.js"></script>
                 
-        <div class="container text-center" style="width: 30%;">
-            <form action="signUp.php" class="needs-validation" novalidate method="POST" name="signUpForm" onSubmit="return checkSignUpForm()">
-                <div class="form-row">
-                    <div class="col-md-8 mb-3">
-                        <a class="title">REGISTRAZIONE</a>
-                        <label>Nome</label>
-                        <input type="text" class="form-control" name="inputName" required>
+        <div class="container">
+            <div class="py-5 text-center">
+              <img class="d-block mx-auto mb-4" src="../css/images/hq_logo.png" alt="" width="72" height="90">
+              <h2>Registrati</h2>
+              <p class="lead">Registrati per accedere a tutte le funzioni.</p>
+            </div>
+      
+            <div class="row">
+              <div class="order-md-1">
+                <h4 class="mb-3">Inserisci le informazioni</h4>
+                <form class="needs-validation" action="signUp.php" novalidate method="POST" name="signUpForm"  onSubmit="return checkSignUpForm()">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="firstName">Nome</label>
+                      <input type="text" class="form-control" name="inputName"required>
                     </div>
-                </div>
-                <div class="form-row">
-                    <div class="col-md-8 mb-3">
-                        <label>Cognome</label>
-                        <input type="text" class="form-control" name="inputSurname" required>
+                    <div class="col-md-6 mb-3">
+                      <label for="lastName">Cognome</label>
+                      <input type="text" class="form-control" name="inputSurname" required>
                     </div>
-                </div>
-                <div class="form-row">
-                    <div class="col-md-8 mb-3">
-                        <label>Email</label>
-                        <input type="email" class="form-control" name="inputEmail" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="col-md-8 mb-3">
-                        <label for="validationTooltip01">Matricola</label>
-                        <input type="text" class="form-control" name="inputMatricola" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="col-md-8 mb-3">
-                        <label>Password</label>
-                        <input type="password" class="form-control" name="inputSignUpPassword" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="col-md-8 mb-3">
-                        <label>Conferma la password</label>
+                  </div>
+      
+                  <div class="mb-3">
+                    <label for="email">Email <span class="text-muted"></span></label>
+                    <input type="email" class="form-control" name="inputEmail">
+                  </div>
+      
+                  <div class="mb-3">
+                    <label for="address">Matricola</label>
+                    <input type="text" class="form-control" name="inputMatricola"  required>
+                  </div>
+      
+                  <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="firstName">Password</label>
+                        <input type="password" class="form-control"   name="inputSignUpPassword" required>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="lastName">Conferma password</label>
                         <input type="password" class="form-control" name="signUpConfirmPassword" required>
+                      </div>
+                  </div>
+                  <h4 class="mb-3">Professione</h4>
+
+                <div class="d-block my-3">
+                    <div class="custom-control custom-radio">
+                        <input id="studente" name="permission" type="radio" class="custom-control-input" value="1" checked required>
+                        <label class="custom-control-label" for="studente">Studente</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="professore" name="permission" type="radio" class="custom-control-input" value="2" required>
+                        <label class="custom-control-label" for="professore">Professore</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="visitatore" name="permission" type="radio" class="custom-control-input" value="0" required>
+                        <label class="custom-control-label" for="visitatore">Visitatore</label>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="col-md-8 mb-3">
-                        <button class="button" type="submit" name="signUpButton" > <span> Registrati </span> </button>
-                    </div>
-                </div>             
-            </form>
-        </div>
 
+                  <button class="btn btn-primary btn-lg btn-block" type="submit" name="signUpButton">Registrati</button>
+                </form>
+              </div>
+            </div>
+            <hr class="mb-4">
+          </div>
         <br>
         <br>
         <nav class="container">

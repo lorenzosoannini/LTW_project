@@ -22,38 +22,32 @@
         </div>
         
         <script type="text/javascript" src="../js/topheader.js"></script>
-
-        <div class="container text-center" style="width: 30%;">
-            <h1 id="login_effettuato"></h1>
-
-            <div id="form_">
-            
-                <form action="logIn.php" id="form_login" class="needs-validation" novalidate method="POST" name="signUpForm" onsubmit="return checkSignUpForm()" style="visibility: visible;">
-                    <div class="form-row">
-                        <div class="col mb-3">
-                            <h1 id="prova_">Bentornato, accedi:</h1>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col mb-3"> 
-                            <label>Email</label>
-                            <input type="email" class="form-control" name="inputEmail" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col mb-3">
-                            <label>Password</label>
-                            <input type="password" class="form-control" name="inputLogInPassword" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col mb-3">
-                            <button class="button" type="submit" name="logInButton" > <span> Accedi </span> </button>
-                        </div>
-                    </div>                  
-                </form>
+        <div class="container">
+            <div class="py-5 text-center">
+              <img class="d-block mx-auto mb-4" src="../css/images/hq_logo.png" alt="" width="72" height="90">
+              <h2 id="login_effettuato">Accedi</h2>
+              <p id="line_" class="lead">Accedi per utilizzare tutte le funzioni.</p>
             </div>
-        </div>
+      
+            <div class="row justify-content-center">
+              <div class="col-4">
+                <form action="logIn.php" id="form_login" class="needs-validation" novalidate method="POST" name="signUpForm" onsubmit="return checkSignUpForm()" style="visibility: visible;">
+                  <div class="row">
+                    <div class="mb-3">
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" name="inputEmail" required>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="password">Password <span class="text-muted"></span></label>
+                    <input type="password" class="form-control" name="inputLogInPassword" required>
+                  </div>
+                  <button class="btn btn-primary btn-lg btn-block" type="submit" name="logInButton">Accedi</button>
+                </form>
+              </div>
+            </div>
+            <hr class="mb-4">
+          </div>
 
         <br>
         <br>
