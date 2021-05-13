@@ -85,3 +85,7 @@ div.bottombar p {
     line-height: 37px;
     font-size: x-small;
 }
+
+canvas{
+  background-color: #822433;
+}
