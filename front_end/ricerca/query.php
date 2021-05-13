@@ -74,7 +74,7 @@
                             echo "  <tr class='table-danger popup'>";
                         echo "  <th scope='row'>$count</th>
                                 <td style='display: none;'>
-                                    <div title='Descrizione'>
+                                    <div class='popupText' title='Descrizione'>
                                         <p>" . $line['descrizione'] . "</p>
                                     </div>
                                 </td>
