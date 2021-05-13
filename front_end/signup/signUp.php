@@ -20,7 +20,7 @@
                         $data=pg_query_params($dbconn,$q2, array($name,$surname,$matricola,$email,$password,$permission));
                         if($data){                         /*in $data è stato inserito un valore di ritorno booleano*/
                             setcookie("username",$name,time()+999999);
-                            header("location: ../index.html");
+                            header("location: succes_reg.html");
                         }
                         else{
                             echo "<h1>Qualcosa è andato storto </h1>";
