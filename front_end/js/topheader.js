@@ -23,6 +23,7 @@ Vue.component('topheader', {
                     <a href="/front_end/">Home</a>
                     <a href="/front_end/novita/">Novità</a>
                     <a href="/front_end/ricerca/">Ricerca</a>
+                    <a href="/front_end/chisiamo/">Chi Siamo</a>
                     <a href="javascript:void(0);" class="icon" onclick="doHamburger()">
                     <i class="fa fa-bars"></i>
                     </a>                

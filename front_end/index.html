@@ -5,49 +5,14 @@
         <meta name="viewport" content="width=device-width initial-scale=1.0"/>
         <title>Home | CURS - Centro Unico di Ricerca Sapienza</title>
         <link rel="icon" href="/front_end/assets/img/favicon.ico">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
         <link rel="stylesheet" href="css/mytopnav_style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script type="text/javascript" src="js/topnav.js"></script>
         <link rel="stylesheet" href="css/mystyle.css">
+        <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="js/vue.min.js"></script>
-        <script type="text/javascript">
-            function loadNewQuery(){
-                document.getElementById("descrizione").innerHTML="";
-                function reqListener () {
-                console.log(this.responseText);
-                }
-                var oReq = new XMLHttpRequest();
-                oReq.onload = function() {
-                    var testo=this.responseText;
-                    var testo2=testo.replace(/\"/g,'§');
-                    var testo3=testo2.split("§"); //array
-                    document.getElementById("titolo").innerHTML=testo3[1];
-                    document.getElementById("autore").innerHTML=testo3[3];
-                    document.getElementById("descrizione").innerHTML=testo3[7];
-                    //document.getElementById("titolo_").innerHTML=testo3[1];
-                };
-                oReq.open("get", "js/random_page.php", true);                       
-                oReq.send();
-            }
-            var oReq = new XMLHttpRequest();
-            
-            var f = function() {
-                var testo=this.responseText;
-                var testo2=testo.replace(/\"/g,'§');
-                var testo3=testo2.split("§"); //array
-                document.getElementById("titolo").innerHTML=testo3[1];
-                document.getElementById("autore").innerHTML=testo3[3];
-                document.getElementById("descrizione").innerHTML=testo3[7];
-            };
-            oReq.onload =f;
-            //pulsante.onclick=f;
-
-            oReq.open("get", "js/random_page.php", true);                       
-            oReq.send();
-
-        </script>
+        <script type="text/javascript" src="js/randomQuery.js"></script>
     </head>
     <body onload="setActiveTab()">
         <div id="header" name="Home">
@@ -92,7 +57,7 @@
                 <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
                 Ricerca casuale
             </button>
-            <p style="display: inline;">Non sai da dove iniziare? Clicca il bottone per iniziare a scoprire le ricerce Sapienza!</p>
+            <p style="display: inline;"><strong>Non sai da dove iniziare?</strong> Clicca il bottone per iniziare a scoprire le ricerce Sapienza!</p>
 
             <div id="casual_page" class="collapse">
                 <div class="container">
