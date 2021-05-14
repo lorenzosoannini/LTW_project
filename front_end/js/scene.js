@@ -5,7 +5,7 @@ var particles = [];
 function drawScene(){
 
 canvas.width = png.width+150;
-canvas.height = png.height+100;
+canvas.height = png.height+70;
 //canvas.addEventListener("mouseover", doMouseOver, false);
 canvas.addEventListener('mousemove', move, false);
 //canvas.addEventListener('mouseout', doMouseOut, false);
@@ -21,8 +21,8 @@ for (var x = 0, x2 = data.width; x < x2; x=x+4) {
 if (data.data[(y * 4 * data.width) + (x * 4) + 3] > 128) {
     var particle = {
     x : x+75,
-    y : y+50,
-        y0: y+50,
+    y : y+35,
+        y0: y+35,
         x0: x+75,
         xDelta: 0,
         yDelta: 0
