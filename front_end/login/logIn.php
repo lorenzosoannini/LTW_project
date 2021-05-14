@@ -18,7 +18,7 @@
                     
                     else{
                         echo "<form id='myForm' action='index.html' method='get'>
-                                <input type='text' name='loginError' value='1'>
+                                <input type='hidden' name='loginError' value='1'>
                               </form>
                               <script type='text/javascript'>
                                 document.getElementById('myForm').submit();
