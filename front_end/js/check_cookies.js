@@ -1,6 +1,10 @@
 
 var username = getCookie("username");
 if (username != "") {
+    document.getElementById("logInButton").style="display: none";
+    document.getElementById("signUpButton").style="display: none";
+    document.getElementById("alreadyLogged").innerHTML="Bentornato <b>"+getCookie("username")+"</b>"
+
     document.getElementById("form_login").style="visibility: hidden;";
     document.getElementById("line_").innerHTML="Puoi continuare a navigare nel sito";
     document.getElementById("login_effettuato").innerHTML="Ciao "+getCookie("username")+", hai già effettuato l accesso";

@@ -12,7 +12,7 @@
                         $q2="select nome from utente where email=$1";
                         $result2=pg_query_params($dbconn,$q2,array($email));
                         $nome=pg_fetch_result($result2,0,0);
-                        setcookie("username",$nome,time()+999999);
+                        setcookie("username",$nome,time()+999999,'/',NULL,0);
                         header("location: ../index.html");
                         }
                     

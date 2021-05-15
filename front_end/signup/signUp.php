@@ -19,7 +19,7 @@
                         $q2="insert into utente values ($1,$2,$3,$4,$5,$6)";
                         $data=pg_query_params($dbconn,$q2, array($name,$surname,$matricola,$email,$password,$permission));
                         if($data){                         /*in $data è stato inserito un valore di ritorno booleano*/
-                            setcookie("username",$name,time()+999999);
+                            setcookie("username",$nome,time()+999999,'/',NULL,0);
                             header("location: succes_reg.html");
                         }
                         else{

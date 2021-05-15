@@ -14,3 +14,19 @@
     color: #822433 !important;
   }
   
+
+/* bootstrap.min.css | http://localhost:3000/front_end/css/bootstrap.min.css */
+
+.btn-outline-danger {
+  /* color: #dc3545; */
+  /* border-color: #dc3545; */
+  color: #822433;
+  border-color: #822433;
+}
+
+:root {
+  /* --bs-red: #dc3545; */
+  /* --bs-danger: #dc3545; */
+  --bs-red: #6f0a19;
+  --bs-danger: #822433;
+}
