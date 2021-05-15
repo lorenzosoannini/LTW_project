@@ -1,31 +1,33 @@
 Vue.component('topheader', {
     template: `
         <header>
-            <div class="container">
-                <a href="https://www.uniroma1.it/it/">
-                    <img class="float-start" style="margin-top: 20px; margin-bottom: 10px;" src="/front_end/assets/img/logo_full.png" alt="Uniroma 1">
-                </a>
-                <h1 class="float-end" style="margin-top: 20px;">
-                    <a class="title" href="/front_end/index.html" title="Home page">CURS - Centro Unico di Ricerca Sapienza</a>
-                    <div class="row justify-content-end">
-                        <div class="col-6 text-end">
-                                <button class="btn btn-outline-danger btn-sm" id="logInButton" href="/front_end/login/">Accedi</button>
-                                <button class="btn btn-outline-danger btn-sm" id="signUpButton" href="/front_end/signup/">Registrati</button>
-                                <p style="font-size:60%" id="alreadyLogged"><b></b></p>
+            <div class="container mt-3">
+                <div class="container">
+                    <div class="float-start">
+                        <a href="https://www.uniroma1.it/it/">
+                            <img src="/front_end/assets/img/logo_full.png" alt="Uniroma 1">
+                        </a>
+                    </div>
+                    <div class="float-end">
+                        <h1>
+                            <a class="title" href="/front_end/index.html" title="Home page">CURS - Centro Unico di Ricerca Sapienza</a>
+                        </h1>
+                        <div class="btn-group float-end mb-2" role="group">
+                            <a class="btn btn-outline-danger" href="/front_end/login/" role="button" id="loginButton">Log-In</a>
+                            <a class="btn btn-outline-danger" href="/front_end/signup/" role="button" id="signupButton">Registrati</a>
                         </div>
                     </div>
-                </h1>
-            </div>
+                </div>
 
-            <div class="container topnav" id="myTopnav">
-                <a href="/front_end/">Home</a>
-                <a href="/front_end/novita/">Novità</a>
-                <a href="/front_end/ricerca/">Ricerca</a>
-                <a href="/front_end/login/">LogIn</a>
-                <a href="/front_end/signup/">Registrati</a>
-                <a href="javascript:void(0);" class="icon" onclick="doHamburger()">
-                <i class="fa fa-bars"></i>
-                </a>                
+                <div class="container topnav" id="myTopnav">
+                    <a href="/front_end/">Home</a>
+                    <a href="/front_end/novita/">Novità</a>
+                    <a href="/front_end/ricerca/">Ricerca</a>
+                    <a href="/front_end/chisiamo/">Chi Siamo</a>
+                    <a href="javascript:void(0);" class="icon" onclick="doHamburger()">
+                    <i class="fa fa-bars"></i>
+                    </a>                
+                </div>
             </div>
         </header>
         `

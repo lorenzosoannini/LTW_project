@@ -17,8 +17,12 @@
                         }
                     
                     else{
-                        echo "<h1>Email o password sbagliati<h1>
-                        <a href=../signup/index.html> Clicca qui per registrarti </a>";
+                        echo "<form id='myForm' action='index.html' method='get'>
+                                <input type='hidden' name='loginError' value='1'>
+                              </form>
+                              <script type='text/javascript'>
+                                document.getElementById('myForm').submit();
+                              </script>";
                     }
                 }
                 ?>
