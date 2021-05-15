@@ -12,11 +12,7 @@
         <link rel="stylesheet" href="css/mystyle.css">
         <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="js/vue.min.js"></script>
-<<<<<<< HEAD
-        
-=======
         <script type="text/javascript" src="js/randomQuery.js"></script>
->>>>>>> d1ca63047e2668cc30555d8e86095f8282ca42e5
     </head>
     <body onload="setActiveTab()">
         <div id="header" name="Home">
@@ -61,12 +57,8 @@
                 <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
                 Ricerca casuale
             </button>
-<<<<<<< HEAD
-            <p style="display: inline;">Non sai da dove iniziare? Clicca il bottone per iniziare a scoprire le ricerce Sapienza!</p>
-=======
             <p style="display: inline;"><strong>Non sai da dove iniziare?</strong> Clicca il bottone per iniziare a scoprire le ricerce Sapienza!</p>
 
->>>>>>> d1ca63047e2668cc30555d8e86095f8282ca42e5
             <div id="casual_page" class="collapse">
                 <div class="container">
                     <div class="col-md">
@@ -139,8 +131,8 @@
         <script>
             var username = getCookie("username");
             if (username != "") {
-                document.getElementById("logInButton").style="display: none";
-                document.getElementById("signUpButton").style="display: none";
+                document.getElementById("loginButton").style="display: none";
+                document.getElementById("signupButton").style="display: none";
                 document.getElementById("alreadyLogged").innerHTML="Bentornato <b>"+getCookie("username")+"</b>"
                 }
 

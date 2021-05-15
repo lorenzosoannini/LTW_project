@@ -15,6 +15,7 @@ Vue.component('topheader', {
                         <div class="btn-group float-end mb-2" role="group">
                             <a class="btn btn-outline-danger" href="/front_end/login/" role="button" id="loginButton">Log-In</a>
                             <a class="btn btn-outline-danger" href="/front_end/signup/" role="button" id="signupButton">Registrati</a>
+                            <p id="alreadyLogged"></p>
                         </div>
                     </div>
                 </div>
