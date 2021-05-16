@@ -6,13 +6,6 @@
   box-sizing: border-box;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
 h1 {
   font-size: 2.5rem;
 }
@@ -89,9 +82,15 @@ time {
   margin-bottom: 8px;
 }
 
-p {
+.timeline p {
     display: block;
     color: white;
+}
+
+.boxtitle {
+    display: block;
+    color: white;
+    font-weight: bold;
 }
 
 

@@ -31,13 +31,12 @@ Emiliano Pedica, *@emi4458*
 
 ## Features
 -Search page to query Sapienza research projects\
--Sign Up and login system to add new projecs or publications\
+-Sign Up and login system to add or edit projecs and publications\
 -News page to see the newest publications\
 -Responsive navbar with hamburger menu on smaller screens\
--Custom error 404 page\
--Cookie to remember last login
+-Custom error 404 page (for Apache server)\
+-Cookie to remember last login\
+-Extra: interactive Sapienza logo in "about us" section
 
 ## Idee
--Sezione nella home che suggerisce una pagina casuale sulle ricerche in corso.\
--Uso di cookies per ricordare ultimo login utente\
 -Iscrizione ad una newsletter

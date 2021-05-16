@@ -32,7 +32,7 @@
                             while($line = pg_fetch_array($data, null, PGSQL_ASSOC)){
                                 echo "<li>
                                         <div>
-                                            <time>". $line['annopub'] . "</time><p>" . $line['descrizione'] . "</p>
+                                            <time>". $line['annopub'] . "</time><p class='boxtitle'>" . $line['titolo'] . "</p><p>" . $line['descrizione'] . "</p>
                                         </div>
                                       </li>";
                             }
