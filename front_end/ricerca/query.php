@@ -24,6 +24,7 @@
         <br>
 
         <?php
+            error_reporting(E_ALL ^ E_WARNING);
             $dbconn=pg_connect("host=localhost port=5432 dbname=centro_ricerca_unico user=postgres password=password") or die("errore di connessione".pg_last_error());
             if(!(isset($_POST['ricercaButton']))){ header("Location: index.html"); }
             else{

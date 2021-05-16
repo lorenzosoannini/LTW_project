@@ -3,56 +3,56 @@ var ctx       = canvas.getContext("2d");
 var particles = [];
 
 function drawScene(){
+    canvas.width = png.width+150;
+    canvas.height = png.height+70;
+    //canvas.addEventListener("mouseover", doMouseOver, false);
+    canvas.addEventListener('mousemove', move, false);
+    //canvas.addEventListener('mouseout', doMouseOut, false);
+    //canvas.addEventListener('click', doClick, false);
 
-canvas.width = png.width+150;
-canvas.height = png.height+70;
-//canvas.addEventListener("mouseover", doMouseOver, false);
-canvas.addEventListener('mousemove', move, false);
-//canvas.addEventListener('mouseout', doMouseOut, false);
-//canvas.addEventListener('click', doClick, false);
+    ctx.drawImage(png, 0, 0);
 
-ctx.drawImage(png, 0, 0);
+    var data = ctx.getImageData(0, 0, png.width, png.height);
+    ctx.clearRect(0,0,canvas.width, canvas.height);
 
-var data = ctx.getImageData(0, 0, png.width, png.height);
-ctx.clearRect(0,0,canvas.width, canvas.height);
-
-for (var y = 0, y2 = data.height; y < y2; y=y+4) {
-for (var x = 0, x2 = data.width; x < x2; x=x+4) {
-if (data.data[(y * 4 * data.width) + (x * 4) + 3] > 128) {
-    var particle = {
-    x : x+75,
-    y : y+35,
-        y0: y+35,
-        x0: x+75,
-        xDelta: 0,
-        yDelta: 0
-    };
-    particles.push(particle);
-}
-}
-}
+    for (var y = 0, y2 = data.height; y < y2; y=y+4) {
+        for (var x = 0, x2 = data.width; x < x2; x=x+4) {
+            if (data.data[(y * 4 * data.width) + (x * 4) + 3] > 128) {
+                var particle = {
+                    x : x+75,
+                    y : y+35,
+                    y0: y+35,
+                    x0: x+75,
+                    xDelta: 0,
+                    yDelta: 0
+                };
+                particles.push(particle);
+            }
+        }
+    }
 
     console.log(particles);
-ctx.fillStyle = "White";
+    ctx.fillStyle = "White";
 
-var renderStuff = setInterval(function() {
-ctx.clearRect(0,0,canvas.width, canvas.height);
-for(var i=0, j=particles.length;i<j;i++){
-var particle = particles[i];
-ctx.save();
-// ctx.rotate((Math.PI/180)*2);
-// ctx.translate(100, 100);
-    if(Math.sqrt(Math.pow(particle.x-particle.x0,2)+Math.pow(particle.y-particle.y0, 2)) > 1){
-    particle.x += particle.xDelta/200;
-    particle.y += particle.yDelta/200;
-    }else{
-    particle.x = particle.x0;
-    particle.y =  particle.y0;
-    }
-ctx.fillRect(particle.x, particle.y, 2, 2);
-// ctx.restore();
-}
-}, 1);
+    var renderStuff = setInterval(function() {
+        ctx.clearRect(0,0,canvas.width, canvas.height);
+        for(var i=0, j=particles.length; i<j; i++){
+            var particle = particles[i];
+            ctx.save();
+            // ctx.rotate((Math.PI/180)*2);
+            // ctx.translate(100, 100);
+            if(Math.sqrt(Math.pow(particle.x-particle.x0,2)+Math.pow(particle.y-particle.y0, 2)) > 1){
+                particle.x += particle.xDelta/200;
+                particle.y += particle.yDelta/200;
+            }
+            else{
+                particle.x = particle.x0;
+                particle.y =  particle.y0;
+            }
+            ctx.fillRect(particle.x, particle.y, 2, 2);
+            // ctx.restore();
+        }
+    }, 1);
 
 }
 
@@ -64,64 +64,61 @@ var offsetX = canvas.offsetLeft;
 var offsetY = canvas.offsetTop;
     
 function doMouseOver(e){
-// zamani k hover shod
-// console.log(1);
-mouseX = parseInt(e.clientX - offsetX);
+    // console.log(1);
+    mouseX = parseInt(e.clientX - offsetX);
     mouseY = parseInt(e.clientY - offsetY);
-ctx.clearRect(0,0,canvas.width, canvas.height);
-//for(var i=0, j=particles.length;i<j;i++){
-//ctx.clearRect(particles[i].x, particles[i].y, 2, 2);
-//}
-for(var i=0, j=particles.length;i<j;i++){
-var xDistance = particles[i].x - mouseX;
-    var yDistance = particles[i].y - mouseY;
-    var distance = Math.sqrt(xDistance * xDistance + yDistance * yDistance);
-    angle = Math.atan2(yDistance,xDistance);
-    particles[i].x += Math.cos(angle) * 10;
-    particles[i].y += Math.sin(angle) * 10;
-ctx.fillRect(particles[i].x, particles[i].y, 2, 2);
-}
+    ctx.clearRect(0,0,canvas.width, canvas.height);
+    //for(var i=0, j=particles.length;i<j;i++){
+        //ctx.clearRect(particles[i].x, particles[i].y, 2, 2);
+    //}
+    for(var i=0, j=particles.length; i<j; i++){
+        var xDistance = particles[i].x - mouseX;
+        var yDistance = particles[i].y - mouseY;
+        var distance = Math.sqrt(xDistance * xDistance + yDistance * yDistance);
+        angle = Math.atan2(yDistance,xDistance);
+        particles[i].x += Math.cos(angle) * 10;
+        particles[i].y += Math.sin(angle) * 10;
+        ctx.fillRect(particles[i].x, particles[i].y, 2, 2);
+    }
 }
 function move(e){
-// madami k hover hast
-// console.log(2);
-//mouseX = parseInt(e.clientX - offsetX);
-//mouseY = parseInt(e.clientY - offsetY);
+    // console.log(2);
+    //mouseX = parseInt(e.clientX - offsetX);
+    //mouseY = parseInt(e.clientY - offsetY);
 
-var rect = e.target.getBoundingClientRect();
-mouseX = e.clientX - rect.left; //x position within the element.
-mouseY = e.clientY - rect.top;  //y position within the element.
+    var rect = e.target.getBoundingClientRect();
+    mouseX = e.clientX - rect.left; //x position within the element.
+    mouseY = e.clientY - rect.top;  //y position within the element.
 
-//ctx.clearRect(0,0,canvas.width, canvas.height);
-/*for(var i=0, j=particles.length;i<j;i++){
-ctx.clearRect(particles[i].x, particles[i].y, 2, 2);
-}*/
-for(var i=0, j=particles.length;i<j;i++){
-    var xDistance = particles[i].x - mouseX;
-    var yDistance = particles[i].y - mouseY;
-    var distance = Math.sqrt(xDistance * xDistance + yDistance * yDistance);
-
-    if (distance < 20) {
-    angle = Math.atan2(yDistance,xDistance);
-    particles[i].x += Math.cos(angle) * distance;
-    particles[i].y += Math.sin(angle) * distance;
-
-    particles[i].yDelta = particles[i].y0 - particles[i].y;
-    particles[i].xDelta = particles[i].x0 - particles[i].x;
-    }
-    
-/* else if(Math.abs(particle.x-particle.x0) > .01){
-    particle.x += particle.xDelta/400;
-    particle.y += particle.yDelta/400;
+    //ctx.clearRect(0,0,canvas.width, canvas.height);
+    /*for(var i=0, j=particles.length;i<j;i++){
+        ctx.clearRect(particles[i].x, particles[i].y, 2, 2);
     }*/
-//ctx.fillRect(particles[i].x, particles[i].y, 2, 2);
+    for(var i=0, j=particles.length; i<j; i++){
+        var xDistance = particles[i].x - mouseX;
+        var yDistance = particles[i].y - mouseY;
+        var distance = Math.sqrt(xDistance * xDistance + yDistance * yDistance);
+
+        if (distance < 20) {
+            angle = Math.atan2(yDistance,xDistance);
+            particles[i].x += Math.cos(angle) * distance;
+            particles[i].y += Math.sin(angle) * distance;
+
+            particles[i].yDelta = particles[i].y0 - particles[i].y;
+            particles[i].xDelta = particles[i].x0 - particles[i].x;
+        }
+        
+    /*else if(Math.abs(particle.x-particle.x0) > .01){
+        particle.x += particle.xDelta/400;
+        particle.y += particle.yDelta/400;
+    }*/
+    //ctx.fillRect(particles[i].x, particles[i].y, 2, 2);
+    }
 }
-}
+
 function doMouseOut(e){
-// zamani k kharej shod
-// console.log(3);
+    // console.log(3);
 }
 function doClick(e){
-// zamani k click shod
-
+    // zamani k click shod
 }
