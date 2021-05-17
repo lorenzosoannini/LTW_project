@@ -6,6 +6,7 @@
         <title>Novità | CURS - Centro Unico di Ricerca Sapienza</title>
         <link rel="icon" href="/front_end/assets/img/favicon.ico">
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+        <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="../css/mytopnav_style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script type="text/javascript" src="../js/topnav.js"></script>
@@ -47,8 +48,6 @@
 
             <script type="text/javascript">
                 (function () {
-                    "use strict";
-
                     // define variables
                     var items = document.querySelectorAll(".timeline li");
 
