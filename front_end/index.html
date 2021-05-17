@@ -13,6 +13,7 @@
         <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="js/vue.min.js"></script>
         <script type="text/javascript" src="js/randomQuery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </head>
     <body onload="setActiveTab()">
         <div id="header" name="Home">
@@ -105,7 +106,6 @@
                             <div class="mb-1 text-muted">Bandi</div>
                             <p class="card-text mb-auto">Sapienza è fortemente impegnata nel supportare le attività di ricerca ed innovazione di docenti, ricercatori e dottorandi.</p>
                         </div>
-                        <img class="card-img-right flex-auto d-none d-md-block" src="css/images/research.png" alt="Card image cap" width="150" height="250">
                     </div>
                 </div>
             </div>          
@@ -137,7 +137,7 @@
             if (username != "") {
                 document.getElementById("loginButton").style="display: none";
                 document.getElementById("signupButton").style="display: none";
-                document.getElementById("alreadyLogged").innerHTML="Bentornato <b>"+getCookie("username")+"</b>"
+                document.getElementById("dropdownMenuButton").innerHTML="Bentornato <b>"+getCookie("username")+"</b>"
                 }
 
 

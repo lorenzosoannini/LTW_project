@@ -14,7 +14,16 @@ Vue.component('topheader', {
                         </h1>
                         <div class="btn-group float-end mb-2" role="group">
                             <a class="btn btn-outline-danger" href="/front_end/login/" role="button" id="loginButton">Log-In</a>
-                            <p id="alreadyLogged"></p>
+                            <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+</div>
                             <a class="btn btn-outline-danger" href="/front_end/signup/" role="button" id="signupButton">Registrati</a>
                         </div>
                     </div>

@@ -14,6 +14,7 @@
         <script type="text/javascript" src="../js/topnav.js"></script>
         <link rel="stylesheet" href="../css/mystyle.css">
         <script type="text/javascript" src="../js/vue.min.js"></script>
+        <script type="text/javascript" src="changeRadio.js"></script>
 
     </head>
     <body onload="setActiveTab()">
@@ -28,7 +29,7 @@
             <div class="py-5 text-center">
               <img class="d-block mx-auto mb-4" src="../css/images/hq_logo.png" alt="" width="72" height="90">
               <h2>Registrati</h2>
-              <p class="lead">Registrati per accedere a tutte le funzioni.</p>
+              <p class="lead" id="prova">Registrati per accedere a tutte le funzioni.</p>
             </div>
       
             <div class="row">
@@ -52,7 +53,7 @@
                   </div>
       
                   <div class="mb-3">
-                    <label for="address">Matricola</label>
+                    <label for="address" id="labelMatricola">Matricola</label>
                     <input type="text" class="form-control" name="inputMatricola"  required>
                   </div>
       
@@ -70,19 +71,14 @@
 
                 <div class="d-block my-3">
                     <div class="custom-control custom-radio">
-                        <input id="studente" name="permission" type="radio" class="custom-control-input" value="1" checked required>
-                        <label class="custom-control-label" for="studente">Studente</label>
+                        <input onchange="checkChange()" id="ricercatore" name="permission" type="radio" class="custom-control-input" value="1" checked required>
+                        <label class="custom-control-label" for="ricarcatore">Ricercatore</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input id="professore" name="permission" type="radio" class="custom-control-input" value="2" required>
-                        <label class="custom-control-label" for="professore">Professore</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input id="visitatore" name="permission" type="radio" class="custom-control-input" value="0" required>
-                        <label class="custom-control-label" for="visitatore">Visitatore</label>
+                        <input onchange="checkChange()" id="collaboratore" name="permission" type="radio" class="custom-control-input" value="2" required>
+                        <label class="custom-control-label" for="collaboratore">Collaboratore</label>
                     </div>
                 </div>
-
                   <button class="btn btn-primary btn-lg btn-block" type="submit" name="signUpButton">Registrati</button>
                 </form>
               </div>
