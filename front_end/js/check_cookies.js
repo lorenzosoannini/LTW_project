@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("loginButton").style="display: none";
         document.getElementById("signupButton").style="display: none";
         document.getElementById("alreadyLogged").innerHTML="Bentornato <b>"+getCookie("username")+"</b>";
+        document.getElementById("alreadyLogged").hidden = false;
     }
 
 

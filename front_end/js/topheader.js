@@ -14,11 +14,11 @@ Vue.component('topheader', {
                         </h1>
                         <div class="btn-group float-end mb-2" role="group">
                             <a class="btn btn-outline-danger" href="/front_end/login/" role="button" id="loginButton">Log-In</a>
-                            <p id="alreadyLogged"></p>
+                            
                             <div class="dropdown">
-                                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-danger dropdown-toggle" type="button" id="alreadyLogged" data-bs-toggle="dropdown" aria-expanded="false" hidden>
                                 </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <ul class="dropdown-menu" aria-labelledby="alredyLogged">
                                     <li><a class="dropdown-item" href="#">Area personale</a></li>
                                     <li><a class="dropdown-item" href="#">Log-out</a></li>
                                 </ul>
