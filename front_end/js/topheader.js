@@ -16,13 +16,11 @@ Vue.component('topheader', {
                             <a class="btn btn-outline-danger" href="/front_end/login/" role="button" id="loginButton">Log-In</a>
                             <p id="alreadyLogged"></p>
                             <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown button
+                                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#">Area personale</a></li>
+                                    <li><a class="dropdown-item" href="#">Log-out</a></li>
                                 </ul>
                             </div>
                             <a class="btn btn-outline-danger" href="/front_end/signup/" role="button" id="signupButton">Registrati</a>

@@ -98,5 +98,7 @@
                 </a>
             </div>
         </div>
+
+        <script type="text/javascript" src="../js/check_cookies.js"></script>
     </body>
 </html>
