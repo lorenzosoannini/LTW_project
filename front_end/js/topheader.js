@@ -14,26 +14,19 @@ Vue.component('topheader', {
                         </h1>
                         <div class="btn-group float-end mb-2" role="group">
                             <a class="btn btn-outline-danger" href="/front_end/login/" role="button" id="loginButton">Log-In</a>
-                            <p id="alreadyLogged"></p>
                             <div class="dropdown" style="display:none" id="d_down">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-danger dropdown-toggle" type="button" id="alreadyLogged" data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown button
                                 </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#" onclick="deleteCookie()" >Esci</a></li>
+                                <ul class="dropdown-menu" aria-labelledby="alreadyLogged">
+                                    <li><a class="dropdown-item" href="#">Area personale</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="deleteCookie()">Esci</a></li>
                                 </ul>
                             </div>
                             <a class="btn btn-outline-danger" href="/front_end/signup/" role="button" id="signupButton">Registrati</a>
                         </div>
                     </div>
                 </div>
-
-                <script>
-                    function deleteCookie(){
-                        document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-                        window.location.reload(true)
-                    }
-                </script>
 
                 <div class="container topnav" id="myTopnav">
                     <a href="/front_end/">Home</a>
