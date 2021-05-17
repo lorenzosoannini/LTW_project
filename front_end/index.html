@@ -131,46 +131,6 @@
             </div>
         </div>
 
-<<<<<<< HEAD
-        <script type="text/javascript" src="js/check_cookies.js"> </script>          <!--non funziona quindi lo incollo sotto-->
-        <script>
-            var username = getCookie("username");
-            if (username != "") {
-                document.getElementById("loginButton").style="display: none";
-                document.getElementById("signupButton").style="display: none";
-                document.getElementById("d_down").style="display: block";
-                document.getElementById("dropdownMenuButton1").innerHTML="Bentornato <b>"+getCookie("username")+"</b>"
-                }
-
-
-            function getCookie(cname) {
-                var name = cname + "=";
-                var decodedCookie = decodeURIComponent(document.cookie);
-                var ca = decodedCookie.split(';');
-                for (var i = 0; i < ca.length; i++) {
-                    var c = ca[i];
-                    while (c.charAt(0) == ' ') {
-                        c = c.substring(1);
-                    }
-                    if (c.indexOf(name) == 0) {
-                        return c.substring(name.length, c.length);
-                    }
-                }
-                return "";
-            }
-
-            function checkCookie(cname){
-                var x=getCookie("username");
-                if (username != "") {
-                    return false;
-                }
-                else{
-                    return true; 
-                }
-            }
-        </script>
-=======
         <script type="text/javascript" src="js/check_cookies.js"></script>
->>>>>>> e9bbcaef53c69176aa6321d88b22855368d6185d
     </body>
 </html>
