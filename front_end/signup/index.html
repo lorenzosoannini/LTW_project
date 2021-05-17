@@ -60,32 +60,32 @@
                 <form class="needs-validation" action="signUp.php" novalidate method="POST" name="signUpForm"  onSubmit="return checkSignUpForm()">
                   <div class="row">
                     <div class="col-md-6 mb-3">
-                      <label for="firstName">Nome</label>
-                      <input type="text" class="form-control" name="inputName"required>
+                      <label for="inputName">Nome</label>
+                      <input type="text" class="form-control" name="inputName"required placeholder="e.g. Mario">
                     </div>
                     <div class="col-md-6 mb-3">
-                      <label for="lastName">Cognome</label>
-                      <input type="text" class="form-control" name="inputSurname" required>
+                      <label for="inputSurname">Cognome</label>
+                      <input type="text" class="form-control" name="inputSurname" required placeholder="e.g. Rossi">
                     </div>
                   </div>
       
                   <div class="mb-3">
-                    <label for="email">Email <span class="text-muted"></span></label>
-                    <input type="email" class="form-control" name="inputEmail">
+                    <label for="inputEmail">Email <span class="text-muted"></span></label>
+                    <input type="email" class="form-control" name="inputEmail" placeholder="e.g. you@example.com">
                   </div>
       
                   <div class="mb-3">
-                    <label for="address" id="labelMatricola">Codice identificativo</label>
-                    <input type="text" class="form-control" name="inputMatricola"  required>
+                    <label for="inputMatricola" id="labelMatricola">Codice identificativo</label>
+                    <input type="text" class="form-control" name="inputMatricola" placeholder="e.g. matricola, id professore" required>
                   </div>
       
                   <div class="row">
                       <div class="col-md-6 mb-3">
-                        <label for="firstName">Password</label>
+                        <label for="inputSignUpPassword">Password</label>
                         <input type="password" class="form-control"   name="inputSignUpPassword" required>
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label for="lastName">Conferma password</label>
+                        <label for="signUpConfirmPassword">Conferma password</label>
                         <input type="password" class="form-control" name="signUpConfirmPassword" required>
                       </div>
                   </div>
