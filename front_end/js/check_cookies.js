@@ -2,6 +2,7 @@
 var username = getCookie("username");
 if (username != "") {
     document.getElementById("logInButton").style="display: none";
+    document.getElementById("d_down").style="display: none";
     document.getElementById("signUpButton").style="display: none";
     document.getElementById("alreadyLogged").innerHTML=getCookie("username");
     document.getElementById("form_login").style="visibility: hidden;";
