@@ -14,6 +14,7 @@ Vue.component('topheader', {
                         </h1>
                         <div class="btn-group float-end mb-2" role="group">
                             <a class="btn btn-outline-danger" href="/front_end/login/" role="button" id="loginButton">Log-In</a>
+<<<<<<< HEAD
                             <p id="alreadyLogged"></p>
                             <div class="dropdown" style="display:none" id="d_down">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -21,6 +22,15 @@ Vue.component('topheader', {
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     <li><a class="dropdown-item" href="#" onclick="deleteCookie()" >Esci</a></li>
+=======
+                            
+                            <div class="dropdown">
+                                <button class="btn btn-danger dropdown-toggle" type="button" id="alreadyLogged" data-bs-toggle="dropdown" aria-expanded="false" hidden>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="alredyLogged">
+                                    <li><a class="dropdown-item" href="#">Area personale</a></li>
+                                    <li><a class="dropdown-item" href="#">Log-out</a></li>
+>>>>>>> e9bbcaef53c69176aa6321d88b22855368d6185d
                                 </ul>
                             </div>
                             <a class="btn btn-outline-danger" href="/front_end/signup/" role="button" id="signupButton">Registrati</a>
