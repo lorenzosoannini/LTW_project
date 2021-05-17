@@ -1,12 +1,11 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     var username = getCookie("username");
     if (username != "") {
         document.getElementById("loginButton").style="display: none";
         document.getElementById("signupButton").style="display: none";
-        document.getElementById("d_down").style="display: block";
-        document.getElementById("dropdownMenuButton1").innerHTML="Bentornato <b>"+getCookie("username")+"</b>"
-        }
+        document.getElementById("alreadyLogged").innerHTML="Bentornato <b>"+getCookie("username")+"</b>";
+        document.getElementById("alreadyLogged").hidden = false;
+    }
 
 
     function getCookie(cname) {
@@ -37,8 +36,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 });
-
-function deleteCookie(){
-    document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    window.location.reload(true);
-}
