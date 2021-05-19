@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="../css/mystyle.css">
         <link rel="stylesheet" href="../css/timeline.css">
         <script type="text/javascript" src="../js/vue.min.js"></script>
+        <script type="text/javascript" src="../js/check_cookies.js"></script>
     </head>
     <body onload="setActiveTab()">
         <div id="header" name="Novità">
@@ -98,7 +99,5 @@
                 </a>
             </div>
         </div>
-
-        <script type="text/javascript" src="../js/check_cookies.js"></script>
     </body>
 </html>

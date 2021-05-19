@@ -9,10 +9,12 @@
                     $q1="select * from utente where email= $1 and password= $2";
                     $result=pg_query_params($dbconn,$q1,array($email,$password));
                     if($line=pg_fetch_array($result,null,PGSQL_ASSOC)){
-                        $q2="select nome from utente where email=$1";
+                        $q2="select * from utente where email=$1";
                         $result2=pg_query_params($dbconn,$q2,array($email));
                         $nome=pg_fetch_result($result2,0,0);
-                        setcookie("username",$nome,time()+999999,'/',NULL,0);
+                        $permission=pg_fetch_result($result2,0,5);
+                        $user = '{"username":"' . $nome . '", "permission":' . $permission . '}';
+                        setcookie("user",$user,time()+999999,'/',NULL,0);
                         header("location: ../index.html");
                         }
                     

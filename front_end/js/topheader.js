@@ -19,7 +19,7 @@ Vue.component('topheader', {
                                     Dropdown button
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="alreadyLogged">
-                                    <li><a class="dropdown-item" href="#">Area personale</a></li>
+                                    <li><a class="dropdown-item" href="/front_end/areapersonale/">Area personale</a></li>
                                     <li><a class="dropdown-item" href="#" onclick="deleteCookie()">Esci</a></li>
                                 </ul>
                             </div>

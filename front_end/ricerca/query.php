@@ -15,6 +15,7 @@
         <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
         <link rel="stylesheet" href="../css/jquery-ui.css">
         <script type="text/javascript" src="../js/descPopUp.js"></script>
+        <script type="text/javascript" src="../js/check_cookies.js"></script>
     </head>
     <body onload="setActiveTab()">
         <div id="header" name="Ricerca">
@@ -302,7 +303,5 @@
                 </a>
             </div>
         </div>
-
-        <script type="text/javascript" src="../js/check_cookies.js"></script>
     </body>
 </html>
