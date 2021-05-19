@@ -23,12 +23,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Controlla il tipo di utente: ricercatore o collaboratore
+// Controlla il tipo di utente: ricercatore (1) o collaboratore (0) e carica l'area personale corrispondente
 
-document.addEventListener('DOMContentLoaded', function() {
+$(document).ready(function() {
     var user = getCookie("user");
     if (user != "") {
         var userobj = JSON.parse(user);
         var usertype = userobj.usertype;
+        if(usertype == '0')         // utente è un collaboratore
+            $("#mainbox").load("collaboratore.html");
+        else                        //utente è un ricercatore
+            $("mainbox").load("ricercatore.html");
     }
 });
