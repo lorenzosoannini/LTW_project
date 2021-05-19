@@ -14,15 +14,14 @@
                     $usertype=$_POST['usertype'];
                     $q4="select id from codici_id where id=$1";
                     $result4=pg_query_params($dbconn,$q4,array($matricola));
-                    if($usertype==1){
-                        if(!($line4=pg_fetch_array($result4,null,PGSQL_ASSOC))){
-                            echo "<form id='myForm' action='index.html' method='get'>
+                    if($usertype==1 && !($line4=pg_fetch_array($result4,null,PGSQL_ASSOC))){                        
+                        echo "<form id='myForm' action='index.html' method='get'>
                                 <input type='hidden' name='loginError' value='1'>
                               </form>
                               <script type='text/javascript'>
                                 document.getElementById('myForm').submit();
                               </script>";
-                        }
+                        
                     }
                     else{
                         $name=$_POST['inputName'];
@@ -42,8 +41,8 @@
                         }
                     }
                 }
-                ?>
-                </body>
+        ?>
+    </body>
 
 </html>
             
