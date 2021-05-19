@@ -33,6 +33,6 @@ $(document).ready(function() {
         if(usertype == '0')         // utente è un collaboratore
             $("#mainbox").load("collaboratore.html");
         else                        //utente è un ricercatore
-            $("mainbox").load("ricercatore.html");
+            $("#mainbox").load("ricercatore.html");
     }
 });
