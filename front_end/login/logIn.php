@@ -12,8 +12,9 @@
                         $q2="select * from utente where email=$1";
                         $result2=pg_query_params($dbconn,$q2,array($email));
                         $nome=pg_fetch_result($result2,0,0);
+                        $id=pg_fetch_result($result2,0,2);
                         $usertype=pg_fetch_result($result2,0,5);
-                        $user = '{"username":"' . $nome . '", "usertype":' . $usertype . '}';
+                        $user = '{"username":"' . $nome . '", "id":' . $id . ', "usertype":' . $usertype . '}';
                         setcookie("user",$user,time()+999999,'/',NULL,0);
                         header("location: ../index.html");
                         }
