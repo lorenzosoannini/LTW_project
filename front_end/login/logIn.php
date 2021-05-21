@@ -16,6 +16,7 @@
                     $usertype=pg_fetch_result($result2,0,5);
                     $user = '{"username":"' . $nome . '", "surname":"' . $cognome . '", "usertype":' . $usertype . '}';
                     setcookie("user",$user,time()+999999,'/',NULL,0);
+                    setcookie("user_email",$email,time()+999999,'/',NULL,0);
                     header("location: ../index.html");
                 }
                     

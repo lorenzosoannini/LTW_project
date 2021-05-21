@@ -34,6 +34,7 @@
                         if($data){                         /*in $data è stato inserito un valore di ritorno booleano*/
                             $user = '{"username":"' . $name . '", "usertype":' . $usertype . '}';
                             setcookie("user",$user,time()+999999,'/',NULL,0);
+                            setcookie("user_email",$email,time()+999999,'/',NULL,0);
                             header("location: succes_reg.html");
                         }
                         else{
