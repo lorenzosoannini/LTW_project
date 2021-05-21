@@ -46,11 +46,11 @@ a.title {
     right: 0;
   }
 
-  .div1{
+.div1{
     box-sizing: border-box;
     text-align: center;
     border: 1px blue;
-  }
+}
 
 
   /* Create three equal columns that floats next to each other */
