@@ -12,6 +12,8 @@
             }
         </script>
         <script type="text/javascript" src="../js/checkEditForm.js"></script>
+        <link href="../css/offcanvas.css" rel="stylesheet">
+        <script src="../js/areaPersonale.js"></script>
     </head>
     <body>
         <div class="container text-center">
@@ -171,7 +173,38 @@
                     Crea
                 </div>
             </div>
-
         </div>
+    
+    <main role="main" class="container">
+      <div class="my-3 p-3 bg-white rounded box-shadow">
+        <h6 class="border-bottom border-gray pb-2 mb-0">I miei dati</h6>
+        <div class="media text-muted pt-3">
+          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray" >
+            <strong class="d-block text-gray-dark">Nome</strong>
+            <a id="_nome" style="font-style: italic;">Qui c'è il nome err</a>
+          </p>
+        </div>
+        <div class="media text-muted pt-3">
+          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray" >
+            <strong class="d-block text-gray-dark">Cognome</strong>
+            <a id="_cognome" style="font-style: italic;">err</a>
+          </p>
+        </div>
+        <div class="media text-muted pt-3">
+          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark"  >Email</strong>
+            <a id="_email" style="font-style: italic;">err</a>
+          </p>
+        </div>
+        <div class="media text-muted pt-3">
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+              <strong class="d-block text-gray-dark"  >Codice identificativo</strong>
+              <a id="_matricola" style="font-style: italic;">err</a>
+            </p>
+          </div>
+      </div>
+    </main>    
+    
+    
     </body>
 </html>
