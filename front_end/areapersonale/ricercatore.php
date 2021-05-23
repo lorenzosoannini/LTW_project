@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="../js/areaPersonale.js"></script>
         <script type="text/javascript">
             function loadDesc(nome, cognome){
                 var titolo = $("#titolo option:selected").text();
