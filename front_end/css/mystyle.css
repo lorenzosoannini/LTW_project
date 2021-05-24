@@ -71,6 +71,14 @@ a.title {
     }
 }
 
+#header{
+    z-index: 999;
+    position: relative;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
 div.bottombar {
     background-color: #822433;
     height: fit-content;
