@@ -1,22 +1,36 @@
 <?php
         $dbconn=pg_connect("host=localhost port=5432 dbname=centro_ricerca_unico user=postgres password=password") or die("errore di connessione".pg_last_error());
 
-        // $q1="select nome from utente where email=$1 ";
-        // $nome=pg_query_params($dbconn,$q1,array($_email2));
-        // $nome_=pg_fetch_result($nome,0,0);
+        $q1="   select dipartimento, count(*) as num 
+                from pubblicazioni 
+                group by dipartimento order by num limit 5";
+        $ris=pg_query($dbconn,$q1);
 
-        // $q2="select cognome from utente where email=$1 ";
-        // $cognome=pg_query_params($dbconn,$q2,array($_email2));
-        // $cognome_=pg_fetch_result($cognome,0,0);
+        $quinta=pg_fetch_result($ris,0,0);
+        $n_quinta=pg_fetch_result($ris,0,1);
 
-        // $q3="select matricola from utente where email=$1 ";
-        // $matricola=pg_query_params($dbconn,$q3,array($_email2));
-        // $matricola_=pg_fetch_result($matricola,0,0);
+        $quarta=pg_fetch_result($ris,1,0);
+        $n_quarta=pg_fetch_result($ris,1,1);
 
-        // echo json_encode($nome_,JSON_UNESCAPED_UNICODE);
-        // echo json_encode($cognome_,JSON_UNESCAPED_UNICODE);
-        // echo json_encode($_email2,JSON_UNESCAPED_UNICODE);
-        // echo json_encode($matricola_,JSON_UNESCAPED_UNICODE);
+        $terza=pg_fetch_result($ris,2,0);
+        $n_terza=pg_fetch_result($ris,2,1);
+        
+        $seconda=pg_fetch_result($ris,3,0);
+        $n_seconda=pg_fetch_result($ris,3,1);
+        
+        $prima=pg_fetch_result($ris,4,0);
+        $n_prima=pg_fetch_result($ris,4,1);
+
+        echo json_encode($quinta,JSON_UNESCAPED_UNICODE);
+        echo json_encode($n_quinta,JSON_UNESCAPED_UNICODE);
+        echo json_encode($quarta,JSON_UNESCAPED_UNICODE);
+        echo json_encode($n_quarta,JSON_UNESCAPED_UNICODE);
+        echo json_encode($terza,JSON_UNESCAPED_UNICODE);
+        echo json_encode($n_terza,JSON_UNESCAPED_UNICODE);
+        echo json_encode($seconda,JSON_UNESCAPED_UNICODE);
+        echo json_encode($n_seconda,JSON_UNESCAPED_UNICODE);
+        echo json_encode($prima,JSON_UNESCAPED_UNICODE);
+        echo json_encode($n_prima,JSON_UNESCAPED_UNICODE);
         
 
         ?>
