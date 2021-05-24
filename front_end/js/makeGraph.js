@@ -15,16 +15,16 @@ function reqListener () {
     var testo=this.responseText;
     var testo2=testo.replace(/\"/g,'§');
     var testo3=testo2.split("§"); //array
-    primo=testo3[17];
-    primo_=Number(testo3[19]);
-    secondo=testo3[13];
-    secondo_=Number(testo3[15]);
+    quinto=testo3[17];
+    quinto_=Number(testo3[19]);
+    quarto=testo3[13];
+    quarto_=Number(testo3[15]);
     terzo=testo3[9];
     terzo_=Number(testo3[11]);
-    quarto=testo3[5];
-    quarto_=Number(testo3[7]);
-    quinto=testo3[1];
-    quinto_=Number(testo3[3]);
+    secondo=testo3[5];
+    secondo_=Number(testo3[7]);
+    primo=testo3[1];
+    primo_=Number(testo3[3]);
 
     today=new Date()
     Highcharts.chart('container', {

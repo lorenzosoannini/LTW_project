@@ -3,7 +3,7 @@
 
         $q1="   select dipartimento, count(*) as num 
                 from pubblicazioni 
-                group by dipartimento order by num limit 5";
+                group by dipartimento order by num desc limit 5";
         $ris=pg_query($dbconn,$q1);
 
         $quinta=pg_fetch_result($ris,0,0);
