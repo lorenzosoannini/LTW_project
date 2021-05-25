@@ -14,6 +14,36 @@
   </head>
 
   <body class="bg-light">
+    <div class="container text-center">
+      <h3>Benvenuto nella tua area personale</h3>
+      <br>
+      <button class="btn ms-3 me-3" style="background-color: #8400ff; color: white" type="button" data-bs-toggle="collapse" data-bs-target="#edit" aria-expanded="false" aria-controls="casual_page">
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        Invia una richiesta di finanziamento
+      </button>
+    </div>
+    <br>
+    <div id="edit" class="collapse" data-bs-parent="#group">
+      <div class="row justify-content-center text-center">
+        <div class="col-8">
+          <form action="sendmail.php" class="needs-validation" novalidate method="POST" name="myForm" style="visibility: visible;">
+            <div class="row">
+              <div class="mb-3">
+                <label for="ogetto">Oggetto dell'email</label>
+                <input type="text" class="form-control" name="oggetto" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="Testo">Descrivi la richiesta <span class="text-muted"></span></label>
+              <textarea class="form-control" name="message" required style="height: 300px;"></textarea>
+            </div>
+            <div class="text-center">
+              <button class="button" type="submit" name="inviaButton"> <span> Invia </span> </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <main role="main" class="container">
       <div class="my-3 p-3 bg-white rounded box-shadow">
@@ -21,7 +51,7 @@
         <div class="media text-muted pt-3">
           <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray" >
             <strong class="d-block text-gray-dark">Nome</strong>
-            <a id="_nome" style="font-style: italic;">Qui c'è il nome err</a>
+            <a id="_nome" style="font-style: italic;">err</a>
           </p>
         </div>
         <div class="media text-muted pt-3">
