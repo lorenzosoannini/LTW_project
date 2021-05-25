@@ -101,5 +101,6 @@ function reqListener () {
     });
 
   };
+
 oReq.open("get", "js/makeGraph.php", true);                       
 oReq.send();
