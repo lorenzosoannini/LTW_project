@@ -18,7 +18,7 @@
         <script type="text/javascript" src="../js/check_cookies.js"></script>
     </head>
     <body onload="setActiveTab()">
-        <div id="header" name="Ricerca">
+        <div id="header" name="Ricerca" class="nosticky">
             <topheader></topheader>
         </div>
         <script type="text/javascript" src="../js/topheader.js"></script>

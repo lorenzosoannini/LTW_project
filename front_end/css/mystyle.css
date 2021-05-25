@@ -71,7 +71,7 @@ a.title {
     }
 }
 
-#header{
+#header:not(.nosticky){
     z-index: 999;
     position: relative;
     position: sticky;
