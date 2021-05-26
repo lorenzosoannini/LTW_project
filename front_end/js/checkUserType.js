@@ -31,7 +31,7 @@ $(document).ready(function() {
         var userobj = JSON.parse(user);
         var usertype = userobj.usertype;
         if(usertype == '0')         // utente è un collaboratore
-            $("#mainbox").load("collaboratore.html");
+            $("#mainbox").load("collaboratore.php");
         else                        //utente è un ricercatore
             $("#mainbox").load("ricercatore.php");
     }

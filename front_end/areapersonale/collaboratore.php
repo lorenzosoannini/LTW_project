@@ -29,6 +29,21 @@
           <form action="sendmail.php" class="needs-validation" novalidate method="POST" name="myForm" style="visibility: visible;">
             <div class="row">
               <div class="mb-3">
+              <?php
+                $dbconn=pg_connect("host=localhost port=5432 dbname=centro_ricerca_unico user=postgres password=password") or die("errore di connessione".pg_last_error());
+                $q1 = "select nome from utente where usertype=1";
+                $titoli = pg_query($dbconn, $q1);
+                if(!$titoli)
+                  echo "<div class='container'><h1>Qualcosa è andato storto</h1></div>";
+                else{
+                  echo "<select class='form-select' id='titolo' name='titolo'>
+                        <option value='' selected>Seleziona il ricercatore a cui inviarla</option>";
+                  while($line = pg_fetch_array($titoli, null, PGSQL_ASSOC)){
+                    echo "<option value=\"". $line['nome'] ."\">" . $line['nome'] . "</option>";
+                  }
+                  echo "</select>";
+                }
+              ?>
                 <label for="ogetto">Oggetto dell'email</label>
                 <input type="text" class="form-control" name="oggetto" required>
               </div>
