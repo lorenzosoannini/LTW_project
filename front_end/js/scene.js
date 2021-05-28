@@ -42,10 +42,10 @@ function drawScene(){
             ctx.save();
             
             if(Math.sqrt(Math.pow(particle.x-particle.x0,2)+Math.pow(particle.y-particle.y0, 2)) > 1){
-                particle.x += particle.xDelta/200;
-                particle.y += particle.yDelta/200;
+                particle.x += particle.xDelta/150;
+                particle.y += particle.yDelta/150;
             }
-            else{
+            else{ //se la distanza dalla posizione originale non supera la soglia, la risetta
                 particle.x = particle.x0;
                 particle.y =  particle.y0;
             }
