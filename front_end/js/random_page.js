@@ -1,9 +1,3 @@
-// $(document).ready(function(){
-//     $("#casual").text("nuovo");
-
-    
-// })
-
 function reqListener () {
     console.log(this.responseText);
   }

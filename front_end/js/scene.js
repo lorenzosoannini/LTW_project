@@ -45,7 +45,7 @@ function drawScene(){
                 particle.x += particle.xDelta/150;
                 particle.y += particle.yDelta/150;
             }
-            else{ //se la distanza dalla posizione originale non supera la soglia, la risetta
+            else{ //se la distanza dalla posizione originale non supera la soglia, la resetta
                 particle.x = particle.x0;
                 particle.y =  particle.y0;
             }
