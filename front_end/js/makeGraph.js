@@ -1,12 +1,3 @@
-var primo="primo";
-var secondo="secondo";
-var terzo="terzo";
-var quarto="quarto";
-var primo_=100;
-var secondo_=60;
-var terzo_=50;
-var quarto_=40;
-
 function reqListener () {
     console.log(this.responseText);
   }
