@@ -30,13 +30,11 @@ Emiliano Pedica, *@emi4458*
 *TBA*
 
 ## Features
--Search page to query Sapienza research projects\
--Sign Up and login system to add or edit projecs and publications\
--News page to see the newest publications\
+-Home page with carousel, random search button and an histogram with the top 5 departements by number of publications\
 -Responsive navbar with hamburger menu on smaller screens\
+-Search page to query Sapienza research projects\
+-Sign Up and login system to add or edit projecs and publications, for researchers, and a mail form to contact researchers, for contributors\
+-News page to see the newest publications on a timeline\
 -Custom error 404 page (for Apache server)\
 -Cookie to remember last login\
 -Extra: interactive Sapienza logo in "about us" section
-
-## Idee
--Iscrizione ad una newsletter
